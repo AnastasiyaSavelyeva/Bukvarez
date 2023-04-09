@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="images/logo.ico">
+    <title>Bukvarez</title>
+    <meta name="viewport" content="width=device=width, initial-scale=1.0">
+
+
+    <link rel="stylesheet" type="text/css" href="styles/slick-theme.css"/>
+    <link rel="stylesheet" type="text/css" href="styles/slick.css"/>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+<header class="header" id="header">
+    <div class="container">
+        <div class="header-top">
+            <div class="header-logo">
+                <a href="#"><img src="images/logo.jpg" alt="logo"></a>
+            </div>
+            <div class="header-block">
+                <div class="header-info">
+                    <div class="header-info-item">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z"/></svg>
+                        <div class="header-info-box">
+                            <p class="header-info-title">
+                                АДРЕС
+                            </p>
+                            <p class="header-info-text">
+                                г. Балашиха, <br/> ул. Горбово 144
+                            </p>
+                        </div>
+                    </div>
+                    <div class="header-info-item">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M256 0a256 256 0 1 1 0 512A256 256 0 1 1 256 0zM232 120V256c0 8 4 15.5 10.7 20l96 64c11 7.4 25.9 4.4 33.3-6.7s4.4-25.9-6.7-33.3L280 243.2V120c0-13.3-10.7-24-24-24s-24 10.7-24 24z"/></svg>
+                        <div class="header-info-box">
+                            <p class="header-info-title">
+                                РАБОТАЕМ
+                            </p>
+                            <p class="header-info-text">
+                                Пн-пт: с 8:00 до 20:00 <br/>
+                                Сб: с 8:00 до 17:30
+                            </p>
+                        </div>
+                    </div>
+                    <div class="header-info-item">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M164.9 24.6c-7.7-18.6-28-28.5-47.4-23.2l-88 24C12.1 30.2 0 46 0 64C0 311.4 200.6 512 448 512c18 0 33.8-12.1 38.6-29.5l24-88c5.3-19.4-4.6-39.7-23.2-47.4l-96-40c-16.3-6.8-35.2-2.1-46.3 11.6L304.7 368C234.3 334.7 177.3 277.7 144 207.3L193.3 167c13.7-11.2 18.4-30 11.6-46.3l-40-96z"/></svg>
+                        <div class="header-info-box">
+                            <a class="header-info-number-one" href="tel:+79167334452">
+                                +7 916 733 44 52
+                            </a>
+                            <a class="header-info-number-two" href="tel:+79995415514">
+                                +7 999 541 55 14
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="header-contacts">
+                    <div class="header-contact-item">
+                        <a class="header-contact-link" href="https://wa.me/79167334452">
+                            <img src="images/whatsapp.png" alt="whatsapp">
+                        </a>
+                    </div>
+                    <div class="header-contact-item">
+                        <a class="header-contact-link" href="tg://resolve?domain=@Narujka123">
+                            <img src="images/telegram.png" alt="telegram">
+                        </a>
+                    </div>
+                    <div class="header-contact-item">
+                        <a class="header-contact-link" href="https://www.instagram.com/zigzagydachi.ru/">
+                            <img src="images/instagram.png" alt="instagram">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <nav class="header-bottom">
+            <!--<div class="header-bottom-block">
+                <button class="header-btn">
+                    <p>МЕНЮ</p>
+                    <img src="images/menu.png" alt="menu">
+                </button>
+            </div>-->
+            <ul class="header-menu">
+                <!--<a href="#header" class="header__close" id="close">
+                    <img src="images/icons/close.svg" alt="">
+                </a>-->
+                <li class="header-menu-item">
+                    <a class="header-menu-link" href="#">
+                        ГЛАВНАЯ
+                    </a>
+                </li>
+                <li class="header-menu-item">
+                    <a class="header-menu-link" href="#">
+                        О НАС
+                    </a>
+                </li>
+                <li class="header-menu-item" id="drop-menu">
+                    <a class="header-menu-link header-drop-menu" href="#">
+                        УСЛУГИ
+                    </a>
+ <!--                   <ul class="drop-menu" id="drop-list">
+                        <li class="drop-menu-item">
+                            <a class="header-menu-list" href="viveski.html">
+                                Объемные буквы, цифры
+                            </a>
+                        </li>
+                        <li class="drop-menu-item">
+                            <a class="header-menu-list" href="obyemniye-bukvi.html">
+                                Световые буквы
+                            </a>
+                        </li>
+                        <li class="drop-menu-item">
+                            <a class="header-menu-list" href="svetkoroba.html">
+                                Световые короба (Лайтбоксы)
+                            </a>
+                        </li>
+                        <li class="drop-menu-item">
+                            <a class="header-menu-list" href="payetki.html">
+                                Объемные и плоские буквы с контражурной подсветкой
+                            </a>
+                        </li>
+                        <li class="drop-menu-item">
+                            <a class="header-menu-list" href="krishniye-ustanovki.html">
+                                Панели кронштейны
+                            </a>
+                        </li>
+                        <li class="drop-menu-item">
+                            <a class="header-menu-list" href="ploskiye-bukvi.html">
+                                Таблички, указатели на дверь, на дом
+                            </a>
+                        </li>
+                        <li class="drop-menu-item">
+                            <a class="header-menu-list" href="steli.html">
+                                Логотипы на  одежду
+                            </a>
+                        </li>
+                        <li class="drop-menu-item">
+                            <a class="header-menu-list" href="brendavto.html">
+                                Гравировка на изделия
+                            </a>
+                        </li>
+                        <li class="drop-menu-item">
+                            <a class="header-menu-list" href="banneri.html">
+                                Лазерная резка
+                            </a>
+                        </li>
+                        <li class="drop-menu-item">
+                            <a class="header-menu-list" href="nakleyki-na-steklo.html">
+                                Уголки потребителя
+                            </a>
+                        </li>
+                    </ul>-->
+                </li>
+                <li class="header-menu-item">
+                    <a class="header-menu-link" href="#">
+                        НАШИ РАБОТЫ
+                    </a>
+                </li>
+                <li class="header-menu-item">
+                    <a class="header-menu-link" href="#">
+                        ЦЕНЫ
+                    </a>
+                </li>
+                <li class="header-menu-item">
+                    <a class="header-menu-link" href="#">
+                        ОТЗЫВЫ
+                    </a>
+                </li>
+                <li class="header-menu-item">
+                    <a class="header-menu-link" href="#">
+                        КОНТАКТЫ
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</header>
+<section class="slider">
+    <div class="container">
+        <div class="slider-wrapper">
+            <div class="arrow-prev">
+                <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                     width="50px" height="50px" viewBox="0 0 612 612" style="enable-background:new 0 0 612 612;" xml:space="preserve"><g><g id="_x31_0_25_"><g><path d="M306,0C136.992,0,0,136.992,0,306s136.992,306,306,306c168.988,0,306-136.992,306-306S475.008,0,306,0z M306,573.75
+			C158.125,573.75,38.25,453.875,38.25,306C38.25,158.125,158.125,38.25,306,38.25c147.875,0,267.75,119.875,267.75,267.75
+			C573.75,453.875,453.875,573.75,306,573.75z M392.751,142.749c-7.478-7.478-19.584-7.478-27.043,0l-146.44,146.44
+			c-4.59,4.59-6.005,10.863-4.953,16.811c-1.052,5.929,0.382,12.221,4.953,16.811l146.44,146.44c7.479,7.459,19.584,7.459,27.043,0
+			c7.478-7.478,7.478-19.584,0-27.043L256.543,306l136.188-136.189C400.21,162.333,400.21,150.227,392.751,142.749z"/></g></g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g></svg>
+            </div>
+            <div class="slider-inner">
+                <div class="slide-holder">
+                    <div class="slide-inner">
+                        <div class="slide-content">
+                            <h2>Увеличим узнаваемость Вашей компании!</h2>
+                            <a href="#form"><button class="btn-slide">Узнать подробнее</button></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="slide-holder">
+                    <div class="slide-inner">
+                        <div class="slide-content">
+
+                        </div>
+                    </div>
+                </div>
+                <div class="slide-holder">
+                    <div class="slide-inner">
+                        <div class="slide-content">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="arrow-next">
+                <?xml version="1.0" ?>
+                <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><title/>
+                    <g data-name="Layer 2" id="Layer_2">
+                        <path d="M1,16A15,15,0,1,1,16,31,15,15,0,0,1,1,16Zm28,0A13,13,0,1,0,16,29,13,13,0,0,0,29,16Z"/>
+                        <path d="M12.13,21.59,17.71,16l-5.58-5.59a1,1,0,0,1,0-1.41h0a1,1,0,0,1,1.41,0l6.36,6.36a.91.91,0,0,1,0,1.28L13.54,23a1,1,0,0,1-1.41,0h0A1,1,0,0,1,12.13,21.59Z"/>
+                    </g>
+                </svg>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="about">
+    <div class="container">
+        <div class="advantages-element">
+            <img src="images/element.png" alt="line">
+        </div>
+        <h2 class="title">
+            Команда <span>Bukvarez</span> приветствует Вас!
+        </h2>
+        <div class="about-block">
+            <div class="about-text">
+               <p> <span>Рекламная вывеска</span> – это визитная карточка компании, которая сообщает прохожим не только о Вашем
+                   нахождении, но и подчеркивает Ваш стиль и статус.
+                   <span>На протяжении 4-х лет </span>наша компания изготавливает вывески для интерьеров офисов, выставочных стендов,
+                   фотозон и наружного оформления. У нас свое производство, благодаря чему мы гарантируем низкие цены <span>без
+                   посредников.</span></p>
+                <a href="#form"><button class="btn-slide">Узнать подробнее</button></a>
+            </div>
+            <div class="about-image">
+                <img src="images/photos/business.jpg" alt="business">
+            </div>
+        </div>
+    </div>
+</section>
+<section class="advantages">
+    <div class="container">
+        <div class="advantages-element">
+            <img src="images/element.png" alt="line">
+        </div>
+        <h2 class="title">
+            Наши преимущества
+        </h2>
+        <div class="advantages-blocks">
+            <div class="advantages-block">
+                <div class="advantages-block-image">
+                    <img src="images/count.png" alt="count">
+                </div>
+                <div class="advantages-block-text">
+                    Бесплатно и быстро рассчитаем заказ - предоставим несколько вариантов исполнения в разных ценовых
+                    диапазонах, и Вы выберете для себя оптимальное решение с учетом бюджета.
+                </div>
+            </div>
+            <div class="advantages-block">
+                <div class="advantages-block-image">
+                    <img src="images/discount.png" alt="discount">
+                </div>
+                <div class="advantages-block-text">
+                    Скидка постоянным клиентам
+                </div>
+            </div>
+            <div class="advantages-block">
+                <div class="advantages-block-image">
+                    <img src="images/worker.png" alt="worker">
+                </div>
+                <div class="advantages-block-text">
+                    Собственное производство, приятная стоимость работаем без посредников
+                </div>
+            </div>
+            <div class="advantages-block">
+                <div class="advantages-block-image">
+                    <img src="images/pencil.png" alt="pencil">
+                </div>
+                <div class="advantages-block-text">
+                    Используем современные, проверенные, сертифицированные материалы
+                </div>
+            </div>
+            <div class="advantages-block">
+                <div class="advantages-block-image">
+                    <img src="images/team.png" alt="team">
+                </div>
+                <div class="advantages-block-text">
+                    Квалифицированные специалисты
+                </div>
+            </div>
+            <div class="advantages-block">
+                <div class="advantages-block-image">
+                    <img src="images/wall-clock.png" alt="clock">
+                </div>
+                <div class="advantages-block-text">
+                    Оперативное изготовление (сроки изготовления соблюдаем с точностью)
+                </div>
+            </div>
+            <div class="advantages-block">
+                <div class="advantages-block-image">
+                    <img src="images/wall-clock.png" alt="clock">
+                </div>
+                <div class="advantages-block-text">
+                    Доставим и произведем монтаж
+                </div>
+            </div>
+            <div class="advantages-block">
+                <div class="advantages-block-image">
+                    <img src="images/handshake.png" alt="handshake">
+                </div>
+                <div class="advantages-block-text">
+                    Предоставляем гарантию 1 год
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<div class="parallax-window" data-parallax="scroll" data-image-src="images/town.jpg"></div>
+<section class="steps">
+    <div class="container">
+        <div class="advantages-element">
+            <img src="images/element.png" alt="line">
+        </div>
+        <h2 class="title">
+            Вывеска «под ключ» этапы
+        </h2>
+        <div class="timeline" id="element">
+                <ol>
+                    <li>
+                        <div>
+                            Консультация и выбор вида вывески
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            Бесплатный просчет вывески
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            Заключение договора
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            Разработка макета
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            Согласование макета, размеров.
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            Изготовление
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            Доставка и монтаж.
+                        </div>
+                    </li>
+                </ol>
+        </div>
+    </div>
+</section>
+<section class="form" id="form">
+    <div class="container"></div>
+    <div class="advantages-element">
+        <img src="images/element.png" alt="line">
+    </div>
+    <h2 class="title">
+        Заполните форму, и мы свяжемся с вами в ближайшее время!
+    </h2>
+    <form class="form-send" action="https://formspree.io/f/moqrboea" method="POST">
+        <label>
+            Ваше имя:
+            <input type="text" name="name">
+        </label>
+        <label>
+            Ваш телефон:
+            <input type="tel" name="phone">
+        </label>
+        <label>
+            Ваше сообщение:
+            <textarea name="message"></textarea>
+        </label>
+
+        <button type="submit" id="submit" class="btn-slide">Отправить</button>
+    </form>
+</section>
+<footer class="footer">
+    <div class="container">
+        <div class="header-top">
+            <div class="header-logo">
+                <a href="#"><img src="images/logo.jpg" alt="logo"></a>
+            </div>
+            <div class="map">
+                <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Abe7b44741309fe45a140c2c24c314d6175690d7c9332dacf68d5d22f9b8eaf9b&amp;width=300&amp;height=200&amp;lang=ru_RU&amp;scroll=true"></script>
+            </div>
+            <div class="header-block">
+                <div class="header-info">
+                    <div class="header-info-item">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+                            <path d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z"/>
+                        </svg>
+                        <div class="header-info-box">
+                            <p class="header-info-title">
+                                АДРЕС
+                            </p>
+                            <p class="header-info-text">
+                                г. Балашиха, <br/> ул. Горбово 144
+                            </p>
+                        </div>
+                    </div>
+                    <div class="header-info-item">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                            <!--! Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                            <path d="M256 0a256 256 0 1 1 0 512A256 256 0 1 1 256 0zM232 120V256c0 8 4 15.5 10.7 20l96 64c11 7.4 25.9 4.4 33.3-6.7s4.4-25.9-6.7-33.3L280 243.2V120c0-13.3-10.7-24-24-24s-24 10.7-24 24z"/>
+                        </svg>
+                        <div class="header-info-box">
+                            <p class="header-info-title">
+                                РАБОТАЕМ
+                            </p>
+                            <p class="header-info-text">
+                                Пн-пт: с 8:00 до 20:00 <br/>
+                                Сб: с 8:00 до 17:30
+                            </p>
+                        </div>
+                    </div>
+                    <div class="header-info-item">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                            <!--! Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                            <path d="M164.9 24.6c-7.7-18.6-28-28.5-47.4-23.2l-88 24C12.1 30.2 0 46 0 64C0 311.4 200.6 512 448 512c18 0 33.8-12.1 38.6-29.5l24-88c5.3-19.4-4.6-39.7-23.2-47.4l-96-40c-16.3-6.8-35.2-2.1-46.3 11.6L304.7 368C234.3 334.7 177.3 277.7 144 207.3L193.3 167c13.7-11.2 18.4-30 11.6-46.3l-40-96z"/>
+                        </svg>
+                        <div class="header-info-box">
+                            <a class="header-info-number-one" href="tel:+79167334452">
+                                +7 916 733 44 52
+                            </a>
+                            <a class="header-info-number-two" href="tel:+79995415514">
+                                +7 999 541 55 14
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="header-contacts">
+                    <div class="header-contact-item">
+                        <a class="header-contact-link" href="https://wa.me/79167334452">
+                            <img src="images/whatsapp.png" alt="whatsapp">
+                        </a>
+                    </div>
+                    <div class="header-contact-item">
+                        <a class="header-contact-link" href="tg://resolve?domain=@Narujka123">
+                            <img src="images/telegram.png" alt="telegram">
+                        </a>
+                    </div>
+                    <div class="header-contact-item">
+                        <a class="header-contact-link" href="https://www.instagram.com/zigzagydachi.ru/">
+                            <img src="images/instagram.png" alt="instagram">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="year">© 2023 г. </div>
+    </div>
+</footer>
+
+
+
+<script src="scripts/jquery.min.js"></script>
+<script src="scripts/parallax.min.js"></script>
+<script type="text/javascript" src="scripts/slick.min.js"></script>
+<script src="scripts/index.js"></script>
+</body>
+</html>
