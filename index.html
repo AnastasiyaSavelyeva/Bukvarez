@@ -3,20 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <link rel="icon" href="images/logo.ico">
-    <title>Bukvarez</title>
+    <title>BukvaRez</title>
     <meta name="viewport" content="width=device=width, initial-scale=1.0">
-
 
     <link rel="stylesheet" type="text/css" href="styles/slick-theme.css"/>
     <link rel="stylesheet" type="text/css" href="styles/slick.css"/>
     <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
+<div class="progress">
+    <div class="container">
+        <div class="progress-container">
+            <div class="progress-bar" id="myBar"></div>
+        </div>
+    </div>
+</div>
 <header class="header" id="header">
     <div class="container">
         <div class="header-top">
             <div class="header-logo">
-                <a href="#"><img src="images/logo.jpg" alt="logo"></a>
+                <a href="#"><img src="images/logo.png" alt="logo"></a>
             </div>
             <div class="header-block">
                 <div class="header-info">
@@ -57,49 +63,54 @@
                 </div>
                 <div class="header-contacts">
                     <div class="header-contact-item">
-                        <a class="header-contact-link" href="https://wa.me/79167334452">
+                        <a class="header-contact-link" href="https://wa.me/79167334452" target="_blank">
                             <img src="images/whatsapp.png" alt="whatsapp">
                         </a>
                     </div>
                     <div class="header-contact-item">
-                        <a class="header-contact-link" href="tg://resolve?domain=@Narujka123">
+                        <a class="header-contact-link" href="tg://resolve?domain=@Narujka123" target="_blank">
                             <img src="images/telegram.png" alt="telegram">
                         </a>
                     </div>
                     <div class="header-contact-item">
-                        <a class="header-contact-link" href="https://www.instagram.com/zigzagydachi.ru/">
+                        <a class="header-contact-link" href="https://www.instagram.com/invites/contact/?i=v0fz5wr1375f&utm_content=e6vxvm9" target="_blank">
                             <img src="images/instagram.png" alt="instagram">
+                        </a>
+                    </div>
+                    <div class="header-contact-item">
+                        <a class="header-contact-link" href="https://vk.com/bukvarez.balashiha" target="_blank">
+                            <img src="images/vk.png" alt="vk">
                         </a>
                     </div>
                 </div>
             </div>
         </div>
         <nav class="header-bottom">
-            <!--<div class="header-bottom-block">
+           <!-- <div class="header-bottom-block">
                 <button class="header-btn">
                     <p>МЕНЮ</p>
                     <img src="images/menu.png" alt="menu">
                 </button>
             </div>-->
             <ul class="header-menu">
-                <!--<a href="#header" class="header__close" id="close">
+                <!--<a href="#header" class="header__close" id="close-menu">
                     <img src="images/icons/close.svg" alt="">
                 </a>-->
-                <li class="header-menu-item">
+                <li class="header-menu-item ">
                     <a class="header-menu-link" href="#">
                         ГЛАВНАЯ
                     </a>
                 </li>
                 <li class="header-menu-item">
-                    <a class="header-menu-link" href="#">
-                        О НАС
+                    <a class="header-menu-link" href="#" id="about">
+                        О КОМПАНИИ
                     </a>
                 </li>
                 <li class="header-menu-item" id="drop-menu">
-                    <a class="header-menu-link header-drop-menu" href="#">
+                    <div class="header-menu-link header-drop-menu">
                         УСЛУГИ
-                    </a>
- <!--                   <ul class="drop-menu" id="drop-list">
+                    </div>
+                 <ul class="drop-menu" id="drop-list">
                         <li class="drop-menu-item">
                             <a class="header-menu-list" href="viveski.html">
                                 Объемные буквы, цифры
@@ -108,11 +119,6 @@
                         <li class="drop-menu-item">
                             <a class="header-menu-list" href="obyemniye-bukvi.html">
                                 Световые буквы
-                            </a>
-                        </li>
-                        <li class="drop-menu-item">
-                            <a class="header-menu-list" href="svetkoroba.html">
-                                Световые короба (Лайтбоксы)
                             </a>
                         </li>
                         <li class="drop-menu-item">
@@ -150,7 +156,12 @@
                                 Уголки потребителя
                             </a>
                         </li>
-                    </ul>-->
+                        <li class="drop-menu-item">
+                            <a class="header-menu-list" href="nakleyki-na-steklo.html">
+                                Вертикальное озеленение стабилизированным мхом и растениями
+                            </a>
+                        </li>
+                    </ul>
                 </li>
                 <li class="header-menu-item">
                     <a class="header-menu-link" href="#">
@@ -159,16 +170,11 @@
                 </li>
                 <li class="header-menu-item">
                     <a class="header-menu-link" href="#">
-                        ЦЕНЫ
-                    </a>
-                </li>
-                <li class="header-menu-item">
-                    <a class="header-menu-link" href="#">
                         ОТЗЫВЫ
                     </a>
                 </li>
                 <li class="header-menu-item">
-                    <a class="header-menu-link" href="#">
+                    <a class="header-menu-link" href="#" id="contacts">
                         КОНТАКТЫ
                     </a>
                 </li>
@@ -190,16 +196,16 @@
             <div class="slider-inner">
                 <div class="slide-holder">
                     <div class="slide-inner">
-                        <div class="slide-content">
-                            <h2>Увеличим узнаваемость Вашей компании!</h2>
-                            <a href="#form"><button class="btn-slide">Узнать подробнее</button></a>
+                        <div class="slide-content content-left">
+                            <h2>Увеличим узнаваемость <span>Вашей компании!</span></h2>
+                           <!-- <a href="#form"><button class="btn-slide">Узнать подробнее</button></a>-->
                         </div>
                     </div>
                 </div>
                 <div class="slide-holder">
                     <div class="slide-inner">
-                        <div class="slide-content">
-
+                        <div class="slide-content content-right">
+                            <h2>Собственное производство. <br> <span>Гарантия 2 года.</span></h2>
                         </div>
                     </div>
                 </div>
@@ -224,26 +230,83 @@
     </div>
 </section>
 <section class="about">
+    <div class="popup-fade" id="popup">
+        <form class="form-send popup" action="https://formspree.io/f/moqrboea" method="POST">
+            <div class="close" id="close">
+                <img src="images/close.png" alt="close">
+            </div>
+            <label>
+                Ваше имя:
+                <input type="text" name="name">
+            </label>
+            <label>
+                Ваш телефон:
+                <input type="tel" name="phone">
+            </label>
+            <label>
+                Ваше сообщение:
+                <textarea name="message"></textarea>
+            </label>
+            <button type="submit" id="submit2" class="btn-slide">Отправить</button>
+        </form>
+    </div>
+
     <div class="container">
         <div class="advantages-element">
             <img src="images/element.png" alt="line">
         </div>
         <h2 class="title">
-            Команда <span>Bukvarez</span> приветствует Вас!
+            Команда <span>BukvaRez</span> приветствует Вас!
         </h2>
         <div class="about-block">
-            <div class="about-text">
-               <p> <span>Рекламная вывеска</span> – это визитная карточка компании, которая сообщает прохожим не только о Вашем
-                   нахождении, но и подчеркивает Ваш стиль и статус.
-                   <span>На протяжении 4-х лет </span>наша компания изготавливает вывески для интерьеров офисов, выставочных стендов,
-                   фотозон и наружного оформления. У нас свое производство, благодаря чему мы гарантируем низкие цены <span>без
+            <div class="about-part">
+                <p class="about-text"><span>Рекламная вывеска</span> – это визитная карточка компании, которая сообщает
+                    прохожим не
+                    только о Вашем нахождении, но и подчеркивает Ваш стиль и статус. <br>
+                    <span>На протяжении 4-х лет </span>наша компания изготавливает вывески для интерьеров офисов,
+                    выставочных стендов,
+                    фотозон и наружного оформления. У нас свое производство, благодаря чему мы гарантируем низкие
+                    цены <span>без
                    посредников.</span></p>
-                <a href="#form"><button class="btn-slide">Узнать подробнее</button></a>
+                <div class="about-image">
+                    <img src="images/photos/production.jpeg" alt="production">
+                </div>
             </div>
-            <div class="about-image">
-                <img src="images/photos/business.jpg" alt="business">
+            <div class="about-part">
+                <div class="about-image">
+                    <img src="images/photos/business-partner.jpg" alt="business">
+                </div>
+                <p class="about-text">
+                    Мы не указываем цены на изделия, так как каждый заказ индивидуален. На стоимость изделия влияет
+                    размер, материал, техника исполнения.
+                    Мы <span>индивидуально подходим к каждому Заказчику,</span> вникая в его задачи, и предлагаем оптимальное решение
+                    по разумной цене.
+                    Если Вы из другого города, то это не проблема. Мы <span>отправляем заказы в другие города</span> транспортными
+                    компаниями или почтой России в надежной упаковке.
+                    В комплекте всегда есть необходимые крепления и все что нужно для монтажа логотипа и инструкция.
+                    Кроме того, <span>мы всегда на связи!</span>
+                </p>
             </div>
+            <div class="about-part">
+                <p class="about-text">
+                    Мы <span>активно сотрудничаем</span> с различными рекламными агентствами, производителями фотозон для
+                    мероприятий, дизайн-бюро, строительными компаниями
+                    – и иными предприятиями смежных отраслей. <span>Для партнеров мы предоставляем</span> специальные льготные
+                    условия ценообразования, комфортные способы оплаты, честность и порядочность по отношению к Вам, Вашей репутации и Вашему
+                    клиенту.
+                </p>
+                <div class="about-image">
+                    <img src="images/photos/handshake.jpg" alt="partner">
+                </div>
+            </div>
+            <div class="clients">
+                <p class="about-text"><span>Наши клиенты</span> – это магазины, выставочные компании, салоны, бутики, строительные компании,
+                    производственные компании, банки, все предприятия и организации, нуждающиеся в том, чтобы обозначить вход,
+                    привлечь внимание целевой аудитории, создать систему внутренней коммуникации.</p>
+            </div>
+            <button class="btn-slide" id="popup-button">Бесплатная консультация</button>
         </div>
+
     </div>
 </section>
 <section class="advantages">
@@ -266,7 +329,7 @@
             </div>
             <div class="advantages-block">
                 <div class="advantages-block-image">
-                    <img src="images/discount.png" alt="discount">
+                    <img src="images/sale.png" alt="sale">
                 </div>
                 <div class="advantages-block-text">
                     Скидка постоянным клиентам
@@ -277,7 +340,7 @@
                     <img src="images/worker.png" alt="worker">
                 </div>
                 <div class="advantages-block-text">
-                    Собственное производство, приятная стоимость работаем без посредников
+                    Собственное производство, приятная стоимость, работаем без посредников
                 </div>
             </div>
             <div class="advantages-block">
@@ -306,7 +369,7 @@
             </div>
             <div class="advantages-block">
                 <div class="advantages-block-image">
-                    <img src="images/wall-clock.png" alt="clock">
+                    <img src="images/car.png" alt="car">
                 </div>
                 <div class="advantages-block-text">
                     Доставим и произведем монтаж
@@ -317,7 +380,7 @@
                     <img src="images/handshake.png" alt="handshake">
                 </div>
                 <div class="advantages-block-text">
-                    Предоставляем гарантию 1 год
+                    Предоставляем гарантию 2 года
                 </div>
             </div>
         </div>
@@ -373,109 +436,161 @@
         </div>
     </div>
 </section>
-<section class="form" id="form">
-    <div class="container"></div>
-    <div class="advantages-element">
-        <img src="images/element.png" alt="line">
-    </div>
-    <h2 class="title">
-        Заполните форму, и мы свяжемся с вами в ближайшее время!
-    </h2>
-    <form class="form-send" action="https://formspree.io/f/moqrboea" method="POST">
-        <label>
-            Ваше имя:
-            <input type="text" name="name">
-        </label>
-        <label>
-            Ваш телефон:
-            <input type="tel" name="phone">
-        </label>
-        <label>
-            Ваше сообщение:
-            <textarea name="message"></textarea>
-        </label>
-
-        <button type="submit" id="submit" class="btn-slide">Отправить</button>
-    </form>
-</section>
-<footer class="footer">
+<section class="questions">
     <div class="container">
-        <div class="header-top">
-            <div class="header-logo">
-                <a href="#"><img src="images/logo.jpg" alt="logo"></a>
-            </div>
-            <div class="map">
-                <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Abe7b44741309fe45a140c2c24c314d6175690d7c9332dacf68d5d22f9b8eaf9b&amp;width=300&amp;height=200&amp;lang=ru_RU&amp;scroll=true"></script>
-            </div>
-            <div class="header-block">
-                <div class="header-info">
-                    <div class="header-info-item">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
-                            <path d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z"/>
-                        </svg>
-                        <div class="header-info-box">
-                            <p class="header-info-title">
-                                АДРЕС
-                            </p>
-                            <p class="header-info-text">
-                                г. Балашиха, <br/> ул. Горбово 144
-                            </p>
-                        </div>
-                    </div>
-                    <div class="header-info-item">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                            <!--! Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
-                            <path d="M256 0a256 256 0 1 1 0 512A256 256 0 1 1 256 0zM232 120V256c0 8 4 15.5 10.7 20l96 64c11 7.4 25.9 4.4 33.3-6.7s4.4-25.9-6.7-33.3L280 243.2V120c0-13.3-10.7-24-24-24s-24 10.7-24 24z"/>
-                        </svg>
-                        <div class="header-info-box">
-                            <p class="header-info-title">
-                                РАБОТАЕМ
-                            </p>
-                            <p class="header-info-text">
-                                Пн-пт: с 8:00 до 20:00 <br/>
-                                Сб: с 8:00 до 17:30
-                            </p>
-                        </div>
-                    </div>
-                    <div class="header-info-item">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                            <!--! Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
-                            <path d="M164.9 24.6c-7.7-18.6-28-28.5-47.4-23.2l-88 24C12.1 30.2 0 46 0 64C0 311.4 200.6 512 448 512c18 0 33.8-12.1 38.6-29.5l24-88c5.3-19.4-4.6-39.7-23.2-47.4l-96-40c-16.3-6.8-35.2-2.1-46.3 11.6L304.7 368C234.3 334.7 177.3 277.7 144 207.3L193.3 167c13.7-11.2 18.4-30 11.6-46.3l-40-96z"/>
-                        </svg>
-                        <div class="header-info-box">
-                            <a class="header-info-number-one" href="tel:+79167334452">
-                                +7 916 733 44 52
-                            </a>
-                            <a class="header-info-number-two" href="tel:+79995415514">
-                                +7 999 541 55 14
-                            </a>
-                        </div>
-                    </div>
+        <div class="advantages-element">
+            <img src="images/element.png" alt="line">
+        </div>
+        <h2 class="title">
+            Частые вопросы
+        </h2>
+        <div class="questions-blocks">
+            <div class="question-block">
+                <button class="collapsible">Из какого материала изготавливаете логотипы?</button>
+                <div class="content">
+                    <p>Все зависит от Ваших пожеланий! Мы можем изготовить рекламную вывеску практически из любого
+                        материала - акрил, пластик, металл, нержавеющая сталь, и даже дерево. Важно определиться с
+                        местом расположения вывески - на улице или внутри помещения. Также есть много вариантов
+                        сочетания материалов.</p>
                 </div>
-                <div class="header-contacts">
-                    <div class="header-contact-item">
-                        <a class="header-contact-link" href="https://wa.me/79167334452">
-                            <img src="images/whatsapp.png" alt="whatsapp">
-                        </a>
-                    </div>
-                    <div class="header-contact-item">
-                        <a class="header-contact-link" href="tg://resolve?domain=@Narujka123">
-                            <img src="images/telegram.png" alt="telegram">
-                        </a>
-                    </div>
-                    <div class="header-contact-item">
-                        <a class="header-contact-link" href="https://www.instagram.com/zigzagydachi.ru/">
-                            <img src="images/instagram.png" alt="instagram">
-                        </a>
-                    </div>
+            </div>
+            <div class="question-block">
+                <button class="collapsible">Как заказать?</button>
+                <div class="content">
+                    <p>Для просчета Вашего заказа, отправьте нам на электронную почту макет с размерами (желательно в векторном формате).
+                        В случае, если у Вас возникают трудности с изготовлением дизайн-макетов, наши специалисты могут подготовить файлы
+                        самостоятельно, исходя из предоставленного Вами технического задания.
+                        Если у Вас уже разработан макет логотипа, то просим выслать его для просчета в формате EPS/CDR.
+                        Шрифты должны быть переведены в кривые линии (curves). Контуры замкнуты. Цветовой профиль CMYK.
+                        Размер файла должен соответствовать физическому размеру изделия.
+                        Если нужна консультация или разработка рекламной вывески, оставляйте заявку и мы свяжемся с Вами в ближайшее время.
+                        (окно для заявки) Можете написать нам W/А или позвонить +79167334452
+                        Обращаем ваше внимание на то, что регистрацию вывески в органах муниципальной власти наши клиенты
+                        осуществляют самостоятельно, а все остальные процедуры и действия мы берем на себя.
+                        </p>
+                </div>
+            </div>
+            <div class="question-block">
+                <button class="collapsible">Какая стоимость изготовления?</button>
+                <div class="content">
+                    <p>Сколько стоит готовая вывеска? Стоимость вывески зависит от используемых материалов, размера и шрифта букв.
+                        Вы можете сэкономить! Предоставьте готовый дизайн макета, тогда наша работа обойдется дешевле.
+                        Но если закажете изготовление вывески «под ключ», можете быть уверены, что работа будет выполнена на 100%: от дизайна до монтажа.
+                        Каждый наш клиент может выбрать вариант по своим финансовым возможностям. При этом любая вывеска будет выглядеть стильно
+                        и современно, хорошо станет смотреться на фасаде здания, впишется в городскую среду или в Ваш интерьер.
+                        </p>
+                </div>
+            </div>
+            <div class="question-block">
+                <button class="collapsible">Какие сроки изготовления?</button>
+                <div class="content">
+                    <p>Срок изготовления вывески в среднем занимает 4-5 рабочих дней, скорость изготовления зависит от
+                        сложности конструкции. Если у Вас максимально сжатые сроки , мы стараемся решить эту проблему.
+                        Возможно изготовление рекламных конструкций за один день.</p>
+                </div>
+            </div>
+            <div class="question-block">
+                <button class="collapsible">Как осуществляется доставка и оплата?</button>
+                <div class="content">
+                    <p>Стоимость доставки рассчитывается от объема Вашего заказа. От 500 рублей до 5000 р в зависимости от объема машины.
+                        Если Вы из другого города, то это не проблема. Мы отправляем Ваши заказы в другие города транспортными компаниями, в надежной упаковке.
+                        Также наша команда, всегда готовы не только изготовить Ваш заказ, но и произвести монтаж.
+                        Оплата производиться:
+                        -Наличный расчет
+                        -Безналичный по счету
+                        - Перевод на банковскую карту
+                        !!! Во всех случаях оплаты наша компания предоставляет полный пакет бухгалтерских документов (на основании законодательства, действующего на территории РФ)
+                    </p>
+                </div>
+            </div>
+            <div class="question-block">
+                <button class="collapsible">Какие предоставляете гарантии?</button>
+                <div class="content">
+                    <p>На каждую из наших конструкций мы даем гарантию 2 года</p>
                 </div>
             </div>
         </div>
-        <div class="year">© 2023 г. </div>
     </div>
+</section>
+<section class="form" id="form">
+    <div class="container">
+        <div class="advantages-element form-element">
+            <img src="images/element.png" alt="line">
+        </div>
+        <div class="form-position">
+            <h2 class="title form-title">
+                Заполните форму, и мы свяжемся с вами в ближайшее время!
+            </h2>
+            <form class="form-send" action="https://formspree.io/f/moqrboea" method="POST">
+                <label>
+                    Ваше имя:
+                    <input type="text" name="name">
+                </label>
+                <label>
+                    Ваш телефон:
+                    <input type="tel" name="phone">
+                </label>
+                <label>
+                    Ваше сообщение:
+                    <textarea name="message"></textarea>
+                </label>
+                <button type="submit" id="submit" class="btn-slide">Отправить</button>
+            </form>
+        </div>
+    </div>
+</section>
+<section class="contacts">
+    <div class="container">
+        <div class="advantages-element">
+            <img src="images/element.png" alt="line">
+        </div>
+        <h2 class="title">Наши контакты</h2>
+        <div class="contacts-blocks">
+            <div class="contact-block">
+                <div class="contact-title">ТЕЛЕФОНЫ:</div>
+                <div class="contact">+7 916 733 44 52</div>
+                <div class="contact">+7 999 541 55 14</div>
+                <div class="contact-title">E-MAIL</div>
+                <div class="contact">bukvarez.balashiha@mail.ru</div>
+            </div>
+            <div class="contact-block">
+                <div class="contact-title">САЙТ:</div>
+                <div class="contact">info@bukvarez.ru</div>
+                <div class="contact-title">АДРЕС:</div>
+                <div class="contact">г. Балашиха, ул. Горбово, 144</div>
+            </div>
+            <div class="contact-block">
+                <div class="contact-title">РЕЖИМ РАБОТЫ:</div>
+                <div class="contact">Пн-пт: с 8:00 до 20:00 <br/>Сб: с 8:00 до 17:30</div>
+            </div>
+
+        </div>
+        <div class="map-address">
+            <script type="text/javascript" charset="utf-8" async
+                    src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Abe7b44741309fe45a140c2c24c314d6175690d7c9332dacf68d5d22f9b8eaf9b&amp;width=100%25&amp;height=338&amp;lang=ru_RU&amp;scroll=true"></script>
+        </div>
+    </div>
+
+</section>
+<footer class="footer">
+    <div class="container">
+        <div class="logo">
+            <div class="footer-logo">
+                <a href="#"><img src="images/logo.png" alt="logo"></a>
+            </div>
+            <div class="footer-years">
+                <div class="year">© 2023 г. ИП "BukvaRez"</div>
+            </div>
+        </div>
+        <div class="footer-menu">МЕНЮ</div>
+            <div class="footer-menu-item">Главная</div>
+            <div class="footer-menu-item">О компании</div>
+            <div class="footer-menu-item">Этапы работ</div>
+            <div class="footer-menu-item">Наши работы</div>
+            <div class="footer-menu-item">Отзывы</div>
+            <div class="footer-menu-item">Контакты</div>
+        </div>
 </footer>
-
-
 
 <script src="scripts/jquery.min.js"></script>
 <script src="scripts/parallax.min.js"></script>
