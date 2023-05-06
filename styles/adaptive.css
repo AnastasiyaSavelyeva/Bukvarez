@@ -40,7 +40,7 @@
     }
 
     .timeline ol li div {
-        width: 94%;
+        width: 90%;
         height: auto !important;
         margin: 0 auto 25px;
         font-size: 25px;
@@ -261,6 +261,10 @@
         height: 200px;
     }
 
+    .click {
+        display: block;
+    }
+
     .overlay .text {
         top: 34%;
         font-size: 15px;
@@ -287,6 +291,10 @@
         width: 200px;
     }
 
+    .popup.form-send {
+        left: calc(50% - 200px);
+    }
+
     #myBtn {
         padding: 5px;
     }
@@ -311,11 +319,6 @@
 
 @media all and (max-width: 500px) {
 
-    .header-logo {
-        width: 100px;
-        height: 50px;
-    }
-
     .header-info {
         display: none;
     }
@@ -325,11 +328,11 @@
     }
 
     .banner-text {
-        font-size: 35px;
+        font-size: 28px;
     }
 
     .about-text {
-        font-size: 15px;
+        font-size: 18px;
     }
 
     .advantages-block-text {
@@ -343,6 +346,11 @@
 
     .form-send {
         width: 300px;
+    }
+
+    .popup.form-send {
+        top: 10%;
+        left: calc(50% - 150px);
     }
 
     .form-send input, .form-send textarea {
