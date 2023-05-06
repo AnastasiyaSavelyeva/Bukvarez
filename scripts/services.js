@@ -32,6 +32,38 @@ showButtonFour.addEventListener('click', () => {
     else content.style.display = 'grid';
 })
 
+const showButtonFive = document.getElementById('show-examples-five');
+showButtonFive.addEventListener('click', () => {
+    const content = document.getElementById('example-five');
+    const state = content.style.display;
+    if (state === 'grid') content.style.display='none';
+    else content.style.display = 'grid';
+})
+
+const showButtonSix = document.getElementById('show-examples-six');
+showButtonSix.addEventListener('click', () => {
+    const content = document.getElementById('example-six');
+    const state = content.style.display;
+    if (state === 'grid') content.style.display='none';
+    else content.style.display = 'grid';
+})
+
+const showButtonSeven = document.getElementById('show-examples-seven');
+showButtonSeven.addEventListener('click', () => {
+    const content = document.getElementById('example-seven');
+    const state = content.style.display;
+    if (state === 'grid') content.style.display='none';
+    else content.style.display = 'grid';
+})
+
+const showButtonEight = document.getElementById('show-examples-eight');
+showButtonEight.addEventListener('click', () => {
+    const content = document.getElementById('example-eight');
+    const state = content.style.display;
+    if (state === 'grid') content.style.display='none';
+    else content.style.display = 'grid';
+})
+
 
 //popup-open-image
 $('.popup-open-image').magnificPopup({
@@ -39,4 +71,64 @@ $('.popup-open-image').magnificPopup({
     gallery:{enabled:true},
     closeBtnInside: true
 });
+
+
+
+//more
+const modal = document.getElementById("myModal");
+const modalTwo = document.getElementById("myModalTwo");
+
+// Get the button that opens the modal
+const btn = document.getElementById("moreButton");
+const btnTwo = document.getElementById("moreButtonTwo");
+
+// Get the <span> element that closes the modal
+const span = document.getElementsByClassName("close")[0];
+const spanTwo = document.getElementsByClassName("close")[1];
+
+// When the user clicks the button, open the modal
+btn.onclick = function() {
+    modal.style.display = "block";
+}
+btnTwo.onclick = function() {
+    modalTwo.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+    modal.style.display = "none";
+}
+spanTwo.onclick = function() {
+    modalTwo.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target === modal || event.target === modalTwo) {
+        modal.style.display = "none";
+    }
+}
+
+//scroll-button
+// Получить кнопку:
+mybutton = document.getElementById("myBtn");
+
+// Когда пользователь прокручивает вниз 20px от верхней части документа, покажите кнопку
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        mybutton.style.display = "block";
+    } else {
+        mybutton.style.display = "none";
+    }
+}
+// Когда пользователь нажимает на кнопку, прокрутите до верхней части документа
+function topFunction() {
+
+    document.body.scrollTop = 0; // Для Safari
+    document.documentElement.scrollTop = 0; // Для Chrome, Firefox, IE и Opera
+}
+
+
 

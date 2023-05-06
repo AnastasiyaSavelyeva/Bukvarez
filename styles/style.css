@@ -35,7 +35,7 @@ body {
 
 /*-------progress-bar---------*/
 
-/* Стиль заголовка: фиксированная позиция (всегда оставайтесь наверху) */
+/*!* Стиль заголовка: фиксированная позиция (всегда оставайтесь наверху) *!
 .progress {
   position: fixed;
   top: 0;
@@ -44,20 +44,19 @@ body {
   background-color: #f1f1f1;
 }
 
-/* Контейнер прогресса (серый фон) */
+!* Контейнер прогресса (серый фон) *!
 .progress-container {
   width: 100%;
   height: 8px;
   background: #ccc;
 }
 
-/* Индикатор прогресса (индикатор прокрутки) */
+!* Индикатор прогресса (индикатор прокрутки) *!
 .progress-bar {
   height: 8px;
   background: #d0be63;
   width: 0;
-}
-
+}*/
 
 .container {
   max-width: 1200px;
@@ -72,12 +71,13 @@ body {
 .header-top {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .header-logo, .footer-logo {
   width: 200px;
   height: 100px;
-/*  flex-shrink: 0;*/
+  flex-shrink: 0;
 }
 
 .header-logo img,
@@ -99,7 +99,6 @@ body {
   display: flex;
   justify-content: flex-end;
   margin-left: 30px;
-  align-items: center;
   width: 200px;
 }
 
@@ -162,6 +161,67 @@ body {
 .header-contact-item {
   margin: 20px;
 }
+
+/*------menu adaptive--------*/
+
+.menu {
+  display: none;
+  cursor: pointer;
+  margin: 0 15px;
+}
+
+.overlay-menu {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  background-image: url("../images/fon.jpg");
+  background-position: center;
+  background-size: cover;
+  opacity: .9;
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+
+.overlay-content {
+  position: relative;
+  top: 25%;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.overlay-menu a {
+  padding: 15px;
+  text-decoration: none;
+  font-size: 36px;
+  color: white;
+  display: block;
+  transition: 0.3s;
+}
+
+.overlay-menu a:hover, .overlay-menu a:focus {
+  color: #d0be63;
+}
+
+.overlay-menu .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+}
+
+.bar {
+  width: 40px;
+  height: 5px;
+  background-color:#d0be63;
+  margin: 10px 0;
+}
+
+
+/*----header-menu-------*/
 
 .header-menu {
   display: flex;
@@ -240,6 +300,33 @@ li a {
 }
 
 /*------carousel-----*/
+.cd-resize-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0;
+  overflow: hidden;
+  /* Force Hardware Acceleration in WebKit */
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}
+.is-visible .cd-resize-img {
+  width: 50%;
+  /* bounce in animation of the modified image */
+  animation: cd-bounce-in 0.7s;
+}
+@keyframes cd-bounce-in {
+  0% {
+    width: 0;
+  }
+  60% {
+    width: 55%;
+  }
+  100% {
+    width: 50%;
+  }
+}
 
 /*.main-slider {
   background-color: white;
@@ -261,58 +348,30 @@ li a {
   object-fit: cover;
 }*/
 
+/*----banner-------*/
 
-.slide-inner {
-  min-height: 80vh;
-  position: relative;
-  border-radius: 10px;
+.banner {
+  background-image: url("../images/main.jpg"); /* Используемый образ - важно! */
+  background-size: cover;
+  position: relative; /* Необходимо расположить вырезанный текст в середине изображения */
+  height: 80vh; /* Некоторая высота */
 }
 
-.slide-holder .slide-inner {
-  background: url("../images/photos/4.jpeg") top/cover no-repeat;
-
-}
-.slide-holder:nth-child(2) .slide-inner {
-  background: url("../images/photos/5.jpeg") center/cover no-repeat;
-}
-.slide-holder:nth-child(3) .slide-inner {
-  background: url("../images/photos/3.jpeg") center/cover no-repeat;
-}
-
-.slide-holder {
-  padding: 15px 0;
-}
-
-.slide-holder:focus {
-  outline: none;
-}
-
-.slide-content {
-  max-width: 550px;
-  width: 100%;
-  background: rgba(255, 255, 255, .5);
-  border: 4px solid #d0be63;
+.banner-text {
+  background-color: white;
+  color: black;
+  font-size: 50px; /* Адаптивный размер шрифта */
+  font-weight: bold;
+  margin: 0 auto; /* Центр текстового контейнера */
   padding: 20px;
-  position: absolute;
-  font-size: 27px;
-  text-shadow: 5px 5px 5px white;
+  width: 50%;
+  text-align: center; /* Текст по центру */
+  position: absolute; /* Текст положения */
+  top: 50%; /* Расположите текст посередине */
+  left: 50%; /* Расположите текст посередине */
+  transform: translate(-50%, -50%); /* Расположите текст посередине */
+  mix-blend-mode: screen; /* Это делает возможным вырезание текста */
   border-radius: 10px;
-}
-
-.slide-content span {
-  color: white;
-  text-shadow: 5px 5px 5px #38074d;
-}
-
-.content-left {
-  left: 0;
-  top: 0;
-}
-
-.content-right {
-  right: 0;
-  bottom: 0;
-  text-align: right;
 }
 
 .btn-slide {
@@ -325,40 +384,42 @@ li a {
   font-weight: 700;
   color: white;
   cursor: pointer;
+  box-sizing: border-box;
+  position: relative;
+  overflow: hidden;
+  transition: .2s ease all;
 }
+
+.btn-slide::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+          120deg,
+          transparent,
+          rgba(255, 255, 255, 0.5),
+          transparent);
+  transition: all .5s;
+}
+
+.btn-slide:hover::before {
+   left: 100%;
+ }
 
 .btn-slide:hover {
   box-shadow: 0 0 15px #d0be63;
 }
 
-.arrow-prev {
-  position: absolute;
-  left: 20px;
-  top: calc(50% - 25px);
-  fill: #d0be63;
-  z-index: 10;
-  width: 50px;
-  height: 50px;
-  cursor: pointer;
-}
-
-.arrow-next {
-  position: absolute;
-  right: 20px;
-  top: calc(50% - 25px);
-  fill: #d0be63;
-  z-index: 10;
-  width: 50px;
-  height: 50px;
-  cursor: pointer;
-}
 
 /*-------about--------*/
 
 .about {
   padding-top: 60px;
  /* background-image: url("../images/white2.jpg");*/
-  background-color: #ecebeb;
+  background-color: #e5e5e5;
   position: relative;
 }
 
@@ -436,7 +497,7 @@ li a {
 }
 
 .advantages-element {
-  width: 400px;
+  max-width: 400px;
   margin: 0 auto;
 }
 
@@ -506,7 +567,7 @@ li a {
 /*------steps--------*/
 
 .steps {
-  padding-top: 50px;
+  padding: 50px 0;
 }
 
 .timeline {
@@ -551,7 +612,7 @@ li a {
   left: 30px;
   width: 120px;
   padding: 15px;
-  font-size: 1rem;
+  font-size: 20px;
   white-space: normal;
   color: #38074d;
   background-color: white;
@@ -576,61 +637,77 @@ li a {
 }
 
 
-@media screen and (max-width: 599px) {
-  .timeline ol,
-  .timeline ol li {
-    width: auto;
-  }
 
-  .timeline ol {
-    padding: 0;
-    transform: none !important;
-  }
 
-  .timeline ol li {
-    display: block;
-    height: auto;
-    background: transparent;
-  }
+/*-----examples--------*/
 
-  .timeline ol li:first-child {
-    margin-top: 25px;
-  }
+.services-examples {
+  background-color: #e5e5e5;
+  padding: 50px 0;
+}
 
-  .timeline ol li:not(:first-child) {
-    margin-left: auto;
-  }
+.examples {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 50px;
+}
 
-  .timeline ol li div {
-    width: 94%;
-    height: auto !important;
-    margin: 0 auto 25px;
-  }
+.example-item {
+  position: relative;
+  margin: 30px;
+}
 
-  .timeline ol li div {
-    position: static;
-  }
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(255, 255, 255, .9);
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  transform: scale(0);
+  transition: .5s ease;
+  border-radius: 10px;
+}
 
-  .timeline ol li:nth-child(odd) div {
-    transform: none;
-  }
+.btn-example {
+  width: 200px;
+  position: absolute;
+  bottom: 20px;
+  left: calc(50% - 100px);
+  text-align: center;
+}
 
-  .timeline ol li:nth-child(odd) div::before,
-  .timeline ol li:nth-child(even) div::before {
-    left: 50%;
-    top: 100%;
-    transform: translateX(-50%);
-    border: none;
-    border-left: 1px solid white;
-    height: 25px;
-  }
+.example-item:hover .overlay {
+  transform: scale(1);
+}
 
-  .timeline ol li:last-child,
-  .timeline ol li:nth-last-child(2) div::before,
-  .timeline ol li:not(:last-child)::after
- {
-    display: none;
-  }
+.text {
+  color: #38074d;
+  font-size: 20px;
+  font-weight: bold;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.card2 {
+  box-shadow: 0 0 15px white;
+  transition: 0.3s;
+  border-radius: 10px;
+  width: 300px;
+  height: 300px;
+  flex-shrink: 0;
+}
+
+.card2 img {
+  border-radius: 10px;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
 }
 
 /*-----questions---------*/
@@ -676,7 +753,7 @@ li a {
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.2s ease-out;
-  background-color: #ecebeb;
+  background-color: #e5e5e5;
   border-end-start-radius: 10px;
   border-end-end-radius: 10px;
 }
@@ -725,11 +802,13 @@ li a {
 /*-------form-------*/
 
 .form-title {
-  width: 600px;
+  max-width: 600px;
 }
 
 .form {
   background-image: url("../images/white.jpg");
+  background-size: cover;
+  background-position: center;
   padding: 50px 0;
 }
 
@@ -814,6 +893,7 @@ li a {
 .contacts-blocks {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  column-gap: 15px;
   padding: 30px 0;
   justify-items: center;
   align-items: center;
@@ -824,42 +904,51 @@ li a {
   margin-bottom: 20px;
 }
 
+
 .contact-title {
   color: #d0be63;
   margin-bottom: 10px;
 }
 
 
-/*-----footer--------*/
-
-.footer {
-  border-top: 2px solid white;
-  padding-top: 35px;
-  padding-bottom: 20px;
-}
-
-.year {
-  margin-top: 30px;
-  color: #d0be63;
-  font-size: 13px;
-}
-
 /*-------services------*/
+
+.navigator {
+  margin: 20px;
+}
+
+.navigator a {
+  color: #d0be63;
+}
+
+.navigator a:hover {
+  color: white;
+}
 
 .services {
   padding: 30px 0;
-  background-color: #ecebeb;
+  background-image: url("https://gamerwall.pro/uploads/posts/2022-03/1648137797_68-gamerwall-pro-p-fioletovii-igrovoi-fon-krasivie-70.jpg");
+  background-color: #e5e5e5;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
 }
 
 .services-blocks {
-  padding: 50px 0;
+  padding: 0 0 50px 0;
 }
 
 .service-block {
   display: flex;
   justify-content: space-between;
   align-items: start;
-  margin-top: 50px;
+  padding-top: 150px;
+  padding-bottom: 50px;
+}
+
+.service-block:not(.underline) {
+  border-bottom: 2px solid #d0be63;
 }
 
 .service-title {
@@ -871,14 +960,15 @@ li a {
 
 .service-about {
   max-width: 50%;
-  color: #38074d;
+ /* color: #38074d;*/
+  color: white;
   line-height: 1.5;
   letter-spacing: 2px;
   text-align: justify;
 }
 
 .card {
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  box-shadow: 0 0 15px white;
   transition: 0.3s;
   border-radius: 10px;
   width: 40%;
@@ -894,16 +984,18 @@ li a {
 
 .card-text {
   text-align: center;
-  padding: 10px;
+  padding: 15px;
   font-weight: bold;
+  color: white;
 }
 
 .service-example-title {
   margin: 30px 0;
-  color: #38074d;
+ /* color: #38074d;*/
+  color: #d0be63;
   font-size: 20px;
   font-weight: bold;
-  border-bottom: 2px solid #38074d;
+  border-bottom: 2px solid #d0be63;
   position: relative;
   display: inline-block;
   cursor: pointer;
@@ -923,13 +1015,14 @@ li a {
 }
 
 .service-examples {
-  background-image: url("https://gamerwall.pro/uploads/posts/2022-03/1648137797_68-gamerwall-pro-p-fioletovii-igrovoi-fon-krasivie-70.jpg");
+  background-color: #e5e5e5;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
   padding: 30px 0;
   margin-top: 30px;
+  border-radius: 10px;
 }
 
 .service-examples-item:not(.not) {
@@ -939,7 +1032,6 @@ li a {
 .service-examples-item  {
   display: inline-block;
   width: 300px;
-  /*margin: 10px;*/
 }
 
 .not {
@@ -951,7 +1043,7 @@ li a {
   height: 100%;
 }
 
-.grid-1, .grid-2 {
+.grid-1, .grid-2, .grid-3, .grid-4, .grid-5, .grid-6, .grid-7, .grid-8 {
   display: none;
   grid-template-columns: repeat(3, max-content);
   grid-template-rows: max-content;
@@ -1033,6 +1125,390 @@ li a {
   grid-column: 3/4;
 }
 
+.item-3-1 {
+  grid-row: 1/2;
+  grid-column: 1/2;
+}
+
+.item-3-2 {
+  grid-row: 1/2;
+  grid-column: 2/3;
+}
+
+.item-4-1 {
+  grid-row: 1/3;
+  grid-column: 1/2;
+}
+
+.item-4-2 {
+  grid-row: 1/2;
+  grid-column: 2/3;
+}
+
+.item-4-3 {
+  grid-row: 1/3;
+  grid-column: 3/4;
+}
+
+.item-4-4 {
+  grid-row: 2/3;
+  grid-column: 2/3;
+}
+
+.item-4-5 {
+  grid-row: 3/5;
+  grid-column: 1/2;
+}
+
+.item-4-6 {
+  grid-row: 3/5;
+  grid-column: 2/3;
+}
+
+.item-4-7 {
+  grid-row: 3/5;
+  grid-column: 3/4;
+}
+
+.item-5-1 {
+  grid-row: 1/2;
+  grid-column: 1/2;
+}
+
+.item-5-2 {
+  grid-row: 1/2;
+  grid-column: 2/3;
+}
+
+.item-5-3 {
+  grid-row: 1/2;
+  grid-column: 3/4;
+}
+
+.item-6-1 {
+  grid-row: 1/3;
+  grid-column: 1/2;
+}
+.item-6-2 {
+  grid-row: 1/2;
+  grid-column: 2/3;
+}
+.item-6-3 {
+  grid-row: 1/3;
+  grid-column: 3/4;
+}
+
+.item-7-1 {
+  grid-row: 1/3;
+  grid-column: 1/2;
+}
+
+.item-7-2 {
+  grid-row: 1/3;
+  grid-column: 2/3;
+}
+
+.item-7-3 {
+  grid-row: 1/3;
+  grid-column: 3/4;
+}
+
+.item-8-1 {
+  grid-row: 1/3;
+  grid-column: 1/2;
+}
+
+.item-8-2 {
+  grid-row: 1/2;
+  grid-column: 2/3;
+}
+
+.item-8-3 {
+  grid-row: 1/3;
+  grid-column: 3/4;
+}
+
+.item-8-4 {
+  grid-row: 2/3;
+  grid-column: 2/3;
+}
+
+.item-8-5 {
+  grid-row: 3/4;
+  grid-column: 1/2;
+}
+
+.item-8-6 {
+  grid-row: 3/4;
+  grid-column: 2/3;
+}
+
+/*--------reviews----*/
+
+.reviews {
+  padding: 50px 0;
+}
+
+.reviews-blocks {
+  margin: 50px 0;
+}
 
 
+.slide-inner {
 
+  position: relative;
+  border-radius: 10px;
+}
+
+.slide-holder .slide-inner {
+  background: url("../images/photos/review-1.jpg") top/contain no-repeat;
+  width: 500px;
+  height: 200px;
+}
+.slide-holder:nth-child(2) .slide-inner {
+  background: url("../images/photos/review-2.jpg") center/contain no-repeat;
+  width: 500px;
+  height: 200px;
+}
+
+/*.slide-holder {
+  padding: 15px 0;
+}*/
+
+.slide-holder:focus {
+  outline: none;
+}
+/*
+.slide-content {
+  max-width: 550px;
+  width: 100%;
+  background: rgba(255, 255, 255, .5);
+  border: 4px solid #d0be63;
+  padding: 20px;
+  position: absolute;
+  font-size: 27px;
+  text-shadow: 5px 5px 5px white;
+  border-radius: 10px;
+}
+
+.slide-content span {
+  color: white;
+  text-shadow: 5px 5px 5px #38074d;
+}
+
+.content-left {
+  left: 0;
+  top: 0;
+}
+
+.content-right {
+  right: 0;
+  bottom: 0;
+  text-align: right;
+}*/
+
+.arrow-prev {
+  position: absolute;
+  left: 20px;
+  top: calc(50% - 25px);
+  fill: #d0be63;
+  z-index: 10;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+}
+
+.arrow-next {
+  position: absolute;
+  right: 20px;
+  top: calc(50% - 25px);
+  fill: #d0be63;
+  z-index: 10;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+}
+
+/*----------more---------*/
+
+.more {
+  padding: 10px;
+  background-color: transparent;
+  margin-top: 10px;
+  color: white;
+  border: 1px solid #d0be63;
+  font-size: 15px;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+.more:hover {
+  background-color: #d0be63;
+  color: #38074d;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 20;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+  border-radius: 10px;
+  position: relative;
+  color: #38074d;
+  background-color: #e5e5e5;
+  margin: auto;
+  padding: 0 0 20px 0;
+  border: 1px solid #888;
+  width: 80%;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+  -webkit-animation-name: animatetop;
+  -webkit-animation-duration: 0.4s;
+  animation-name: animate-top;
+  animation-duration: 0.4s
+}
+
+@-webkit-keyframes animate-top {
+  from {top:-300px; opacity:0}
+  to {top:0; opacity:1}
+}
+
+@keyframes animate-top {
+  from {top:-300px; opacity:0}
+  to {top:0; opacity:1}
+}
+
+/* Кнопка закрытия */
+.close {
+  color: white;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #38074d;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-header {
+  padding: 20px;
+  background-color: #d0be63;
+  color: white;
+  border-radius: 10px 10px 0 0;
+}
+
+.modal-body {padding: 2px 16px;}
+
+/*----scroll-button----*/
+
+#myBtn {
+  display: none; /* Скрыто по умолчанию */
+  position: fixed; /* Фиксированное / липкое положение */
+  bottom: 20px; /* Поместите кнопку в нижней части страницы */
+  right: 30px; /* Разместить кнопку 30 пикселей от правого */
+  z-index: 99; /* Убедитесь, что он не перекрывается */
+  border: none; /* Удалить границы */
+  outline: none; /* Удалить контур */
+  background-color: #d0be63; /* Установка цвета фона */
+  color: white; /* Цвет текста */
+  cursor: pointer; /* Добавить указатель мыши при наведении */
+  padding: 15px; /* Немного отступов */
+  border-radius: 10px; /* Округленные углы */
+  font-size: 18px; /* Увеличить размер шрифта */
+}
+
+#myBtn:hover {
+  background-color: #555; /* Добавить темно-серый фон при наведении курсора */
+}
+
+
+/*-----footer--------*/
+
+.footer {
+  border-top: 2px solid white;
+  padding-top: 35px;
+  padding-bottom: 20px;
+}
+
+.footer-items {
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-menu-item {
+  color: white;
+}
+
+.year, .rights {
+  text-align: center;
+  margin-top: 30px;
+  color: #d0be63;
+  font-size: 13px;
+}
+
+.rights {
+  color: white;
+  font-size: 11px;
+  margin-top: 10px;
+}
+
+.menu-list {
+  display: flex;
+  align-items: center;
+  padding: 0 50px;
+}
+
+.menu-list ul {
+  padding: 0 50px;
+  list-style: none;
+}
+
+.menu-list ul li {
+  padding: 5px 0;
+}
+
+.menu-list ul li a {
+  color: white;
+  transition: .2s ease all;
+}
+
+.menu-list ul li a:hover {
+  color: #d0be63;
+}
+
+.contact-us {
+  align-self: center;
+}
+
+.contact-us a {
+  color: #d0be63;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.contact-us a:hover {
+  color: white;
+}
+
+.btn {
+  display: inline-block;
+  text-decoration: none;
+}
