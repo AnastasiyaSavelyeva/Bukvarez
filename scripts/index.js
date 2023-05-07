@@ -1,4 +1,4 @@
-$(document).ready(function(){
+/*$(document).ready(function(){
     $('.slider-inner').slick({
         arrows: true,
         prevArrow: '.arrow-prev',
@@ -11,7 +11,11 @@ $(document).ready(function(){
         cssEase: 'linear',
         autoplay: true,
 });
-});
+});*/
+
+new WOW({
+    animateClass: 'animate__animated'
+}).init();
 
 function openNav() {
     document.getElementById("myNav").style.width = "100%";

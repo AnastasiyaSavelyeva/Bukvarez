@@ -6,15 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="styles/magnific-popup.css">
+    <link rel="stylesheet" href="styles/animate.css">
     <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="styles/adaptive.css">
 </head>
 <body>
 <header class="header" id="header">
-    <div class="container">
+    <div class="container container-services">
         <div class="header-top">
             <div class="header-logo">
-                <a href="#"><img src="images/logo.png" alt="logo"></a>
+                <a href="#"><img src="images/logo1.png" alt="logo"></a>
             </div>
             <div class="header-block">
                 <div class="header-info">
@@ -63,9 +64,39 @@
                 </div>
             </div>
         </div>
+        <div class="menu" onclick="openNav()" id="menu">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+
+        <div id="myNav" class="overlay-menu">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()" >&times;</a>
+            <div class="overlay-content" >
+                <a class="header-menu-link" href="index.html#about-company" onclick="closeNav()">О компании</a>
+                <div class="dropdown">
+                    <div class="also">
+                        Продукция
+                    </div>
+                    <div class="dropdown-content">
+                        <a href="#service-one">Объемные буквы, цифры без подсветки</a>
+                        <a href="#service-two">Объемные и плоские буквы, цифры с контражурной подсветкой</a>
+                        <a href="#service-three">Панели кронштейны</a>
+                        <a href="#service-four">Плоские буквы</a>
+                        <a href="#service-five">Логотипы, надписи на одежду</a>
+                        <a href="#service-six">Озеленение стабилизированным мхом и растениями</a>
+                        <a href="#service-seven">Лазерная резка</a>
+                        <a href="#service-eight">Гравировка на изделия</a>
+                        <a href="#">Таблички, указатели на дверь, на дом</a>
+                        <a href="#">Уголки потребителя</a>
+                    </div>
+                </div>
+                <a class="header-menu-link" href="index.html#contacts-company" onclick="closeNav()">Контакты</a>
+            </div>
+        </div>
     </div>
 </header>
-<section class="services">
+<section class="services" id="services">
     <div class="container">
         <div class="navigator">
             <a href="index.html">На главную</a>
@@ -78,7 +109,7 @@
         </h2>
         <div class="services-blocks">
             <div class="service-block" id="service-one">
-                <div class="service-about">
+                <div class="service-about wow animate__fadeInUp" data-wow-duration="2s">
                     <div class="service-title">Объемные, плоские буквы, цифры без подсветки</div>
                     <div>
                         Объемные буквы из ПВХ пластика и акрилового стекла. Задняя и боковая часть букв выполняется из ПВХ
@@ -93,7 +124,7 @@
                         Смотреть примеры работ
                     </div>
                 </div>
-                <div class="card">
+                <div class="card wow animate__fadeInUp" data-wow-duration="2s">
                     <img src="images/photos/10.webp" alt="Световой короб">
                     <div class="card-text">
                         <p>От 90 руб. за 1 см</p>
@@ -130,14 +161,14 @@
             </div>
 
             <div class="service-block" id="service-two">
-                <div class="card">
+                <div class="card wow animate__fadeInUp" data-wow-duration="2s">
                     <img src="images/photos/2.webp" alt="Световой короб">
                     <div class="card-text">
                         <p>От 70 руб. за 1 см</p>
                         <a href="index.html#form" target="_blank" class="btn btn-slide">Узнать стоимость</a>
                     </div>
                 </div>
-                <div class="service-about">
+                <div class="service-about wow animate__fadeInUp" data-wow-duration="2s">
                     <div class="service-title">Объемные и плоские буквы, цифры с контражурной подсветкой</div>
                     <div>
                         Объёмные буквы, декорированные внутренней подсветкой в стиле «контражур». Они интересны тем, что
@@ -205,7 +236,7 @@
             </div>
 
             <div class="service-block" id="service-three">
-                <div class="service-about">
+                <div class="service-about wow animate__fadeInUp" data-wow-duration="2s">
                     <div class="service-title">Панели кронштейны</div>
                     <div>
                         Отличный способ привлечь к вашему заведению внимание из-за расположения рекламной вывески -
@@ -222,7 +253,7 @@
                         Смотреть примеры работ
                     </div>
                 </div>
-                <div class="card">
+                <div class="card wow animate__fadeInUp" data-wow-duration="2s">
                     <img src="images/photos/27.webp" alt="Световой короб">
                     <div class="card-text">
                         <p>От 10 000 руб.</p>
@@ -244,14 +275,14 @@
             </div>
 
             <div class="service-block" id="service-four">
-                <div class="card">
+                <div class="card wow animate__fadeInUp" data-wow-duration="2s">
                     <img src="images/photos/36.webp" alt="Плоские буквы">
                     <div class="card-text">
                         <p>От 65 руб. за 1 см</p>
                         <a href="index.html#form" target="_blank" class="btn btn-slide">Узнать стоимость</a>
                     </div>
                 </div>
-                <div class="service-about">
+                <div class="service-about wow animate__fadeInUp" data-wow-duration="2s">
                     <div class="service-title">Плоские буквы</div>
                     <div>
                         Плоские несветовые буквы – идеальный вариант реализации вывески без больших денежных вложений в
@@ -306,7 +337,7 @@
             </div>
 
             <div class="service-block" id="service-five">
-                <div class="service-about">
+                <div class="service-about wow animate__fadeInUp" data-wow-duration="2s">
                     <div class="service-title">Логотипы, надписи на одежду</div>
                     <div>У нас вы можете приобрести на заказ футболки хлопок с нанесением логотипа и любых надписей. Мы
                         сотрудничаем с надежными поставщиками у нас самое современное оборудование, что позволяет
@@ -317,7 +348,7 @@
                         Смотреть примеры работ
                     </div>
                 </div>
-                <div class="card">
+                <div class="card wow animate__fadeInUp" data-wow-duration="2s">
                     <img src="images/photos/39.webp" alt="Одежда">
                     <div class="card-text">
                         <p>От 500 руб. за 1 футболку</p>
@@ -344,14 +375,14 @@
             </div>
 
             <div class="service-block" id="service-six">
-                <div class="card">
+                <div class="card wow animate__fadeInUp" data-wow-duration="2s">
                     <img src="images/photos/42.webp" alt="Мох">
                     <div class="card-text">
                         <p>от 18 000 руб. за 1 кв.м</p>
                         <a href="index.html#form" target="_blank" class="btn btn-slide">Узнать стоимость</a>
                     </div>
                 </div>
-                <div class="service-about">
+                <div class="service-about wow animate__fadeInUp" data-wow-duration="2s">
                     <div class="service-title">Озеленение стабилизированным мхом и растениями</div>
                     <div>Уникальное решение по озеленению пространства - «живые» зеленые стены, которые не требуют
                         ухода. Используем только высококачественные, натуральные и экологически безопасные
@@ -415,7 +446,7 @@
             </div>
 
             <div class="service-block" id="service-seven">
-                <div class="service-about">
+                <div class="service-about wow animate__fadeInUp" data-wow-duration="2s">
                     <div class="service-title">Лазерная резка</div>
                     <div>Мы предлагаем лазерную резку на широком спектре материалов дерева, фанеры, МДФ, ХДФ. Кому
                         требует точность реза, нестандартный раскрой и гравировка по различным материалам, можете
@@ -427,7 +458,7 @@
                         Смотреть примеры работ
                     </div>
                 </div>
-                <div class="card">
+                <div class="card wow animate__fadeInUp" data-wow-duration="2s">
                     <img src="images/photos/46.webp" alt="Лазерная резка">
                     <div class="card-text">
                         <p></p>
@@ -455,14 +486,14 @@
             </div>
 
             <div class="service-block underline" id="service-eight">
-                <div class="card">
+                <div class="card wow animate__fadeInUp" data-wow-duration="2s">
                     <img src="images/photos/51.webp" alt="Гравировка">
                     <div class="card-text">
                         <p></p>
                         <a href="index.html#form" target="_blank" class="btn btn-slide">Узнать стоимость</a>
                     </div>
                 </div>
-                <div class="service-about">
+                <div class="service-about wow animate__fadeInUp" data-wow-duration="2s">
                     <div class="service-title">Гравировка на изделия</div>
                     <div>Лазерная гравировка – это самый популярный существующий метод нанесения рисунков на
                         поверхности. Благодаря современному оборудованию, нанесение гравировки лазером выполняется так
@@ -544,7 +575,7 @@
         <div class="footer-items">
             <div class="logo">
                 <div class="footer-logo">
-                    <a href="#"><img src="images/logo.png" alt="logo"></a>
+                    <a href="#"><img src="images/logo1.png" alt="logo"></a>
                 </div>
                 <div class="footer-years">
                     <div class="year">© ИП Дольников Андрей Владимирович, 2023 </div>
@@ -591,6 +622,7 @@
 
 <script src="scripts/jquery.min.js"></script>
 <script src="scripts/jquery.magnific-popup.min.js"></script>
+<script src="scripts/wow.min.js"></script>
 <script src="scripts/services.js"></script>
 </body>
 </html>

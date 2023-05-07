@@ -82,6 +82,10 @@
         height: 30px;
     }
 
+    .banner-about {
+        font-size: 50px;
+    }
+
     .about-image {
         height: 300px;
     }
@@ -121,6 +125,16 @@
         width: 170px;
     }
 
+    .banner-about {
+        margin: 0 100px; /* Центр текстового контейнера */
+        padding: 10px;
+        width: 50%;
+    }
+
+    .marquee span {
+        font-size: 40px;
+    }
+
     .contact {
         font-size: 15px;
     }
@@ -144,8 +158,17 @@
 
 @media all and (max-width: 768px) {
 
-    .banner-text {
+    .banner-about {
+        margin: 0 auto;
+        width: 50%;
+    }
+
+    .banner-about {
         font-size: 40px;
+    }
+
+    .marquee span {
+        font-size: 30px;
     }
 
     .header-logo {
@@ -293,6 +316,10 @@
         height: 3px;
     }
 
+    .banner-about {
+        font-size: 35px;
+    }
+
     .about-part {
         flex-direction: column;
     }
@@ -352,6 +379,11 @@
 
     .form-send input, .form-send textarea {
         width: 200px;
+    }
+
+    input[type="checkbox"] {
+        width: 20px;
+        margin: 10px 10px 0 0;
     }
 
     .popup.form-send {
@@ -414,9 +446,22 @@
         display: none;
     }
 
-    .banner-text {
-        font-size: 28px;
+    .banner-about {
+        font-size: 30px;
     }
+
+    .marquee span {
+        font-size: 25px;
+    }
+
+    .header-contact-item {
+        width: 35px;
+    }
+
+    .header-contact-item img {
+        width: 100%;
+    }
+
 
     .about-text {
         font-size: 18px;
@@ -444,6 +489,11 @@
         margin-top: 15px;
         width: 280px;
         margin-left: 0;
+    }
+
+    input[type="checkbox"] {
+        width: 20px;
+        margin: 10px 10px 0 0;
     }
 
     .timeline ol li div {
@@ -513,6 +563,14 @@
 
 @media all and (max-width: 425px) {
 
+    .title {
+        font-size: 25px;
+    }
+
+    .banner-about {
+        font-size: 25px;
+    }
+
     .form-send {
         width: 250px;
     }
@@ -521,8 +579,17 @@
         width: 220px;
     }
 
+    input[type="checkbox"] {
+        width: 20px;
+        margin: 10px 10px 0 0;
+    }
+
     .menu-list {
         padding-right: 5px;
+    }
+
+    .card img {
+        height: 200px;
     }
 
     .service-examples-item {
@@ -535,6 +602,30 @@
 
     .not {
         height: 195px;
+    }
+}
+
+
+@media all and (max-width: 375px) {
+
+    .contacts-blocks {
+        grid-template-columns: 1fr;
+    }
+
+    .menu-list {
+        padding-left: 10px;
+    }
+
+    .service-examples-item {
+        width: 80px;
+    }
+
+    .service-examples-item:not(.not) {
+        height: 70px;
+    }
+
+    .not {
+        height: 155px;
     }
 }
 

@@ -89,6 +89,7 @@ body {
 
 .header-info {
   display: flex;
+  align-items: center;
 }
 
 .header-block {
@@ -98,6 +99,7 @@ body {
 .header-info-item {
   display: flex;
   justify-content: flex-end;
+  align-items: center;
   margin-left: 30px;
   width: 200px;
 }
@@ -159,7 +161,7 @@ body {
 }
 
 .header-contact-item {
-  margin: 20px;
+  margin: 20px 0;
 }
 
 /*------menu adaptive--------*/
@@ -382,21 +384,58 @@ li a {
 
 /*----banner-------*/
 
+.marquee {
+  text-align: left;
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.marquee span {
+  display: inline-block;
+  color: white;
+  font-size: 50px;
+  padding: 0 0 10px 0;
+  width: 100%;
+  text-indent: 0;
+  animation: marquee 10s linear infinite;
+}
+
+.marquee span:hover {
+  animation-play-state: paused
+}
+
+@keyframes marquee {
+  0% {
+    transform: translate(100%, 0);
+  }
+  100% {
+    transform: translate(-100%, 0);
+  }
+}
+
+@media only screen and (max-width: 374px) {
+  .marquee span {
+    animation: none;
+    padding-left: 0
+  }
+}
+
 .banner {
-  background-image: url("../images/main.jpg"); /* Используемый образ - важно! */
+  background-image: url("../images/main.webp"); /* Используемый образ - важно! */
   background-size: cover;
   position: relative; /* Необходимо расположить вырезанный текст в середине изображения */
   height: 80vh; /* Некоторая высота */
 }
 
-.banner-text {
+.banner-about {
   background-color: white;
   color: black;
-  font-size: 50px; /* Адаптивный размер шрифта */
+  font-size: 60px; /* Адаптивный размер шрифта */
   font-weight: bold;
-  margin: 0 auto; /* Центр текстового контейнера */
+  margin: 0 200px; /* Центр текстового контейнера */
   padding: 10px;
-  width: 50%;
+  width: 40%;
   text-align: center; /* Текст по центру */
   position: absolute; /* Текст положения */
   top: 50%; /* Расположите текст посередине */
@@ -889,6 +928,21 @@ li a {
   font-size: 18px;
   margin-left: 30px;
 }
+
+input[type="checkbox"] {
+  width: 20px;
+  margin: 10px 10px 0 0;
+}
+
+.checkbox {
+  font-size: 15px;
+}
+
+.checkbox a {
+  color: #8432a8;
+}
+
+
 
 .form-send input:focus,
 .form-send textarea:focus
@@ -1510,6 +1564,7 @@ li a {
 .footer-items {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .logo {
@@ -1562,4 +1617,10 @@ li a {
 .btn {
   display: inline-block;
   text-decoration: none;
+}
+
+.container-services {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
