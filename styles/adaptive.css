@@ -54,19 +54,8 @@
         transform: none;
     }
 
-    .timeline ol li:nth-child(odd) div::before,
-    .timeline ol li:nth-child(even) div::before {
-        left: 50%;
-        top: 100%;
-        transform: translateX(-50%);
-        border: none;
-        border-left: 1px solid white;
-        height: 25px;
-    }
-
-    .timeline ol li:last-child,
     .timeline ol li:nth-last-child(2) div::before,
-    .timeline ol li:not(:last-child)::after
+    .timeline ol li::after
     {
         display: none;
     }
@@ -140,6 +129,17 @@
         display: inline-block;
     }
 
+/*    .header-top {
+        background-image: url("../images/fon.jpg");
+        background-position: center;
+        background-size: cover;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 400;
+    }*/
+
     .header-info-item {
         width: 140px;
         align-self: center;
@@ -159,8 +159,12 @@
     }
 
     .footer-logo {
-        width: 120px;
-        height: 70px;
+        width: 100px;
+        height: 60px;
+    }
+
+    .rights {
+        font-size: 9px;
     }
 
      .header-bottom {
@@ -212,7 +216,7 @@
         align-items: center;
     }
 
-    .menu-list ul li, .contact-us a {
+    .menu-list ul li {
         font-size: 16px;
     }
 
@@ -228,6 +232,10 @@
 }
 
 @media all and (max-width: 650px) {
+
+    .bar {
+        height: 3px;
+    }
 
     .about-part {
         flex-direction: column;
@@ -281,7 +289,6 @@
         left: calc(50% - 75px);
     }
 
-
     .form-send {
         width: 400px;
         padding: 20px;
@@ -295,9 +302,6 @@
         left: calc(50% - 200px);
     }
 
-    #myBtn {
-        padding: 5px;
-    }
 
     .year {
         font-size: 10px;
@@ -311,20 +315,12 @@
         font-size: 12px;
     }
 
-    .contact-us a {
-        font-size: 15px;
-    }
-
 }
 
 @media all and (max-width: 500px) {
 
     .header-info {
         display: none;
-    }
-
-    .overlay-menu a {
-        font-size: 30px;
     }
 
     .banner-text {
@@ -367,12 +363,20 @@
         font-size: 15px;
     }
 
-    .contact-us {
-        display: none;
+    .contacts-blocks {
+        margin-left: 0;
     }
 
-    .contacts-blocks {
-        grid-template-columns: 1fr;
+    .grid-item {
+        width: 200px;
+    }
+
+    .contact-title {
+        font-size: 16px;
+    }
+
+    .contact {
+        font-size: 14px;
     }
 
     .advantages-block {

@@ -193,8 +193,9 @@ body {
   margin-top: 30px;
 }
 
-.overlay-menu a {
+.overlay-menu a, .also {
   padding: 15px;
+  font-weight: bold;
   text-decoration: none;
   font-size: 36px;
   color: white;
@@ -219,6 +220,32 @@ body {
   background-color:#d0be63;
   margin: 10px 0;
 }
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #38074d;
+  min-width: 200px;
+
+}
+
+.dropdown-content a {
+  font-size: 15px;
+  color: #d0be63;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+
+.dropdown-content a:hover {background-color: white;}
+
+.dropdown:hover .dropdown-content {display: block;}
 
 
 /*----header-menu-------*/
@@ -299,6 +326,8 @@ li a {
   margin-bottom: 10px;
 }
 
+
+
 /*------carousel-----*/
 .cd-resize-img {
   position: absolute;
@@ -327,6 +356,9 @@ li a {
     width: 50%;
   }
 }
+
+
+
 
 /*.main-slider {
   background-color: white;
@@ -363,7 +395,7 @@ li a {
   font-size: 50px; /* Адаптивный размер шрифта */
   font-weight: bold;
   margin: 0 auto; /* Центр текстового контейнера */
-  padding: 20px;
+  padding: 10px;
   width: 50%;
   text-align: center; /* Текст по центру */
   position: absolute; /* Текст положения */
@@ -618,7 +650,6 @@ li a {
   color: #38074d;
   background-color: white;
   border-radius: 10px;
-/*  box-shadow: 0 0 20px 5px white;*/
   text-align: center;
   cursor: pointer;
 }
@@ -628,10 +659,6 @@ li a {
   transform: translateY(-100%);
 }
 
-.timeline ol li:nth-child(odd) div::before {
-  top: 100%;
-  border-width: 8px 8px 0 0;
-}
 
 .timeline ol li:nth-child(even) div {
   top: calc(100% + 16px);
@@ -781,6 +808,11 @@ li a {
   letter-spacing: 2px;
 }
 
+.content p a {
+  color: #38074d;
+  font-weight: bold;
+}
+
 .collapsible:after {
   content: '\02795'; /* Символ юникода для знака "плюс" (+) */
   font-size: 13px;
@@ -838,7 +870,7 @@ li a {
   flex-direction: column;
   margin-top: 50px;
   width: 500px;
-  border: 3px solid #38074d;
+  border: 1px solid #38074d;
   border-radius: 10px;
   padding: 50px;
   box-shadow: 0 0 20px  #38074d;
@@ -862,6 +894,18 @@ li a {
 .form-send textarea:focus
 {
   outline: none;
+}
+
+.btn-submit {
+  background-color: transparent;
+  color: #38074d;
+  border: 2px solid #38074d;
+}
+
+.btn-submit:hover {
+  background-color: #38074d;
+  box-shadow: none;
+  color: white;
 }
 
 .popup-fade {
@@ -903,7 +947,7 @@ li a {
 /*----------contacts----------*/
 
 .contacts {
-  margin: 30px;
+  margin: 30px 0;
   border-radius: 10px;
 }
 
@@ -913,7 +957,7 @@ li a {
   column-gap: 15px;
   padding: 30px 0;
   justify-items: center;
-  align-items: center;
+  margin-left: 30px;
 }
 
 .contact {
@@ -1433,8 +1477,8 @@ li a {
 #myBtn {
   display: none; /* Скрыто по умолчанию */
   position: fixed; /* Фиксированное / липкое положение */
-  bottom: 20px; /* Поместите кнопку в нижней части страницы */
-  right: 30px; /* Разместить кнопку 30 пикселей от правого */
+  bottom: 10px; /* Поместите кнопку в нижней части страницы */
+  right: 10px; /* Разместить кнопку 30 пикселей от правого */
   z-index: 99; /* Убедитесь, что он не перекрывается */
   border: none; /* Удалить границы */
   outline: none; /* Удалить контур */
@@ -1482,14 +1526,14 @@ li a {
 }
 
 .rights {
-  color: white;
+  color: #c2bfbf;
   font-size: 11px;
   margin-top: 10px;
 }
 
 .menu-list {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   padding: 0 50px;
 }
 
@@ -1503,26 +1547,12 @@ li a {
 }
 
 .menu-list ul li a {
-  color: white;
+  color: #c2bfbf;
   transition: .2s ease all;
 }
 
 .menu-list ul li a:hover {
   color: #d0be63;
-}
-
-.contact-us {
-  align-self: center;
-}
-
-.contact-us a {
-  color: #d0be63;
-  text-decoration: none;
-  font-size: 20px;
-}
-
-.contact-us a:hover {
-  color: white;
 }
 
 .btn {
