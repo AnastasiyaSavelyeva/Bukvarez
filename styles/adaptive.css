@@ -59,6 +59,15 @@
     {
         display: none;
     }
+
+    .card img {
+        height: 280px;
+    }
+
+    .service-title {
+        font-size: 26px;
+    }
+
 }
 
 @media all and (max-width: 1024px) {
@@ -88,6 +97,22 @@
     .menu-list ul {
         padding: 0 30px;
     }
+
+    .modal-header h2 {
+        font-size: 23px;
+    }
+
+    .service-examples-item {
+        width: 200px;
+    }
+
+    .service-examples-item:not(.not) {
+        height: 145px;
+    }
+
+    .not {
+        height: 310px;
+    }
 }
 
 @media all and (max-width: 850px) {
@@ -98,6 +123,22 @@
 
     .contact {
         font-size: 15px;
+    }
+
+    .card img {
+        height: 230px;
+    }
+
+    .service-title {
+        font-size: 23px;
+    }
+
+    .service-about div:nth-child(2) {
+        font-size: 15px;
+    }
+
+    .service-block {
+        padding-top: 80px;
     }
 }
 
@@ -231,6 +272,21 @@
     }
 }
 
+@media all and (max-width: 700px) {
+
+    .service-examples-item {
+        width: 150px;
+    }
+
+    .service-examples-item:not(.not) {
+        height: 108px;
+    }
+
+    .not {
+        height: 236px;
+    }
+}
+
 @media all and (max-width: 650px) {
 
     .bar {
@@ -302,7 +358,6 @@
         left: calc(50% - 200px);
     }
 
-
     .year {
         font-size: 10px;
     }
@@ -313,6 +368,42 @@
 
     .menu-list ul li a {
         font-size: 12px;
+    }
+
+    .service-title {
+        font-size: 20px;
+    }
+
+    .service-about div:nth-child(2) {
+        font-size: 15px;
+    }
+
+    .service-examples-item {
+        width: 120px;
+    }
+
+    .service-examples-item:not(.not) {
+        height: 90px;
+    }
+
+    .not {
+        height: 202px;
+    }
+
+    .card img {
+        height: 180px;
+    }
+
+    .service-example-title {
+        font-size: 15px;
+    }
+
+    .card-text p {
+        font-size: 15px;
+    }
+
+    .card-text a {
+        font-size: 15px;
     }
 
 }
@@ -384,6 +475,40 @@
         margin: 10px 0;
     }
 
+    .grid-1, .grid-2, .grid-3, .grid-4, .grid-5, .grid-6, .grid-7, .grid-8 {
+        grid-gap: 10px;
+    }
+
+    .service-block {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .service-about {
+        max-width: 80%;
+    }
+
+    .card {
+        width: 80%;
+        margin-bottom: 30px;
+    }
+
+    .card img {
+        height: 250px;
+    }
+
+    #service-one .service-about, #service-three .service-about, #service-five .service-about, #service-seven .service-about {
+        order:2;
+    }
+
+    #service-one .card, #service-three .card, #service-five .card, #service-seven .card {
+        order:1;
+    }
+
+    #myBtn {
+        padding: 10px; /* Немного отступов */
+        font-size: 15px; /* Увеличить размер шрифта */
+    }
 }
 
 @media all and (max-width: 425px) {
@@ -398,6 +523,18 @@
 
     .menu-list {
         padding-right: 5px;
+    }
+
+    .service-examples-item {
+        width: 100px;
+    }
+
+    .service-examples-item:not(.not) {
+        height: 90px;
+    }
+
+    .not {
+        height: 195px;
     }
 }
 
