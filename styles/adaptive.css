@@ -1,4 +1,4 @@
-@media all and (max-width: 1250px){
+@media all and (max-width: 1250px) {
 
     .container {
         padding: 0 15px;
@@ -55,8 +55,7 @@
     }
 
     .timeline ol li:nth-last-child(2) div::before,
-    .timeline ol li::after
-    {
+    .timeline ol li::after {
         display: none;
     }
 
@@ -193,17 +192,16 @@
         display: inline-block;
     }
 
-/*    .header-top {
-        background-image: url("../images/fon.jpg");
-        background-position: center;
-        background-size: cover;
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        z-index: 400;
-    }*/
-
+    /*    .header-top {
+            background-image: url("../images/fon.jpg");
+            background-position: center;
+            background-size: cover;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 400;
+        }*/
     .header-info-item {
         width: 140px;
         align-self: center;
@@ -231,7 +229,7 @@
         font-size: 9px;
     }
 
-     .header-bottom {
+    .header-bottom {
         display: none
     }
 
@@ -303,9 +301,9 @@
     }
 
     .modal {
-       padding-top: 50px;
-       letter-spacing: 1px;
-       line-height: 1;
+        padding-top: 50px;
+        letter-spacing: 1px;
+        line-height: 1;
     }
 
 }
@@ -563,11 +561,11 @@
     }
 
     #service-one .service-about, #service-three .service-about, #service-five .service-about, #service-seven .service-about {
-        order:2;
+        order: 2;
     }
 
     #service-one .card, #service-three .card, #service-five .card, #service-seven .card {
-        order:1;
+        order: 1;
     }
 
     #myBtn {

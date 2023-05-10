@@ -1,20 +1,19 @@
 'use strict'
 
 
-$(document).ready(function() {
+new WOW({
+    animateClass: 'animate__animated'
+}).init();
 
-    new WOW({
-        animateClass: 'animate__animated'
-    }).init();
+function openNav() {
+    document.getElementById("myNav").style.width = "100%";
+}
 
-    function openNav() {
-        document.getElementById("myNav").style.width = "100%";
-    }
+function closeNav() {
+    document.getElementById("myNav").style.width = "0%";
+}
 
-    function closeNav() {
-        document.getElementById("myNav").style.width = "0%";
-    }
-
+$(document).ready(function () {
 //show examples
 
     const showButtonOne = document.getElementById('show-examples-one');
@@ -129,27 +128,27 @@ $(document).ready(function() {
 
 //scroll-button
 // Получить кнопку:
-   const myButton = document.getElementById("myBtn");
+const myButton = document.getElementById("myBtn");
 
 // Когда пользователь прокручивает вниз 20px от верхней части документа, покажите кнопку
-    window.onscroll = function () {
-        scrollFunction()
-    };
+window.onscroll = function () {
+    scrollFunction()
+};
 
-    function scrollFunction() {
-        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-            myButton.style.display = "block";
-        } else {
-            myButton.style.display = "none";
-        }
+function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        myButton.style.display = "block";
+    } else {
+        myButton.style.display = "none";
     }
+}
 
 // Когда пользователь нажимает на кнопку, прокрутите до верхней части документа
-    function topFunction() {
+function topFunction() {
 
-        document.body.scrollTop = 0; // Для Safari
-        document.documentElement.scrollTop = 0; // Для Chrome, Firefox, IE и Opera
-    }
+    document.body.scrollTop = 0; // Для Safari
+    document.documentElement.scrollTop = 0; // Для Chrome, Firefox, IE и Opera
+}
 
 
 

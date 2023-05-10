@@ -1,47 +1,47 @@
 'use strict'
-$(document).ready(function() {
 
-    /*$(document).ready(function(){
-        $('.slider-inner').slick({
-            arrows: true,
-            prevArrow: '.arrow-prev',
-            nextArrow: '.arrow-next',
-            dots: false,
-            dotsClass: 'slick-dots',
-            infinite: true,
-            speed: 500,
-            fade: true,
-            cssEase: 'linear',
-            autoplay: true,
-    });
-    });*/
 
-    new WOW({
-        animateClass: 'animate__animated'
-    }).init();
+/*$(document).ready(function(){
+    $('.slider-inner').slick({
+        arrows: true,
+        prevArrow: '.arrow-prev',
+        nextArrow: '.arrow-next',
+        dots: false,
+        dotsClass: 'slick-dots',
+        infinite: true,
+        speed: 500,
+        fade: true,
+        cssEase: 'linear',
+        autoplay: true,
+});
+});*/
 
-    function openNav() {
-        document.getElementById("myNav").style.width = "100%";
-    }
+new WOW({
+    animateClass: 'animate__animated'
+}).init();
 
-    function closeNav() {
-        document.getElementById("myNav").style.width = "0%";
-    }
+function openNav() {
+    document.getElementById("myNav").style.width = "100%";
+}
+
+function closeNav() {
+    document.getElementById("myNav").style.width = "0%";
+}
 
 
 //progress-bar
-    /*
-    window.onscroll = function() {myFunction()};
+/*
+window.onscroll = function() {myFunction()};
 
-    function myFunction() {
-        const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-        const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-        const scrolled = (winScroll / height) * 100;
-        document.getElementById("myBar").style.width = scrolled + "%";
-    }*/
+function myFunction() {
+    const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+    const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    const scrolled = (winScroll / height) * 100;
+    document.getElementById("myBar").style.width = scrolled + "%";
+}*/
 
 //drop-menu
-
+$(window).ready(function () {
     const dropMenu = document.getElementById('drop-menu');
     const list = document.getElementById('drop-list');
 
@@ -163,31 +163,33 @@ $(document).ready(function() {
         });
     }
 
+})
+
 //scroll-button
 // Получить кнопку:
-    const myButton = document.getElementById("myBtn");
+const myButton = document.getElementById("myBtn");
 
 // Когда пользователь прокручивает вниз 20px от верхней части документа, покажите кнопку
-    window.onscroll = function () {
-        scrollFunction()
-    };
+window.onscroll = function () {
+    scrollFunction()
+};
 
-    function scrollFunction() {
-        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-            myButton.style.display = "block";
-        } else {
-            myButton.style.display = "none";
-        }
+function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        myButton.style.display = "block";
+    } else {
+        myButton.style.display = "none";
     }
+}
 
 // Когда пользователь нажимает на кнопку, прокрутите до верхней части документа
-    function topFunction() {
+function topFunction() {
 
-        document.body.scrollTop = 0; // Для Safari
-        document.documentElement.scrollTop = 0; // Для Chrome, Firefox, IE и Opera
-    }
+    document.body.scrollTop = 0; // Для Safari
+    document.documentElement.scrollTop = 0; // Для Chrome, Firefox, IE и Opera
+}
 
-})
+
 
 
 
