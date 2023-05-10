@@ -114,7 +114,7 @@ $(window).ready(function () {
 
         // делаем элемент .cd-handle движимым и сменяем позицию .cd-resize-img
         $('.cd-image-container').each(function () {
-            var actual = $(this);
+            const actual = $(this);
             drags(actual.find('.cd-handle'), actual.find('.cd-resize-img'), actual);
         });
     });
@@ -152,12 +152,12 @@ $(window).ready(function () {
 
                 // ...
 
-            }).on("mouseup vmouseup", function (e) {
+            }).on("mouseup vmouseup", function () {
                 dragElement.removeClass('draggable');
                 resizeElement.removeClass('resizable');
             });
             e.preventDefault();
-        }).on("mouseup vmouseup", function (e) {
+        }).on("mouseup vmouseup", function () {
             dragElement.removeClass('draggable');
             resizeElement.removeClass('resizable');
         });

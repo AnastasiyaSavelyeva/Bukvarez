@@ -117,7 +117,7 @@ $(document).ready(function () {
         modalTwo.style.display = "none";
     }
 
-// When the user clicks anywhere outside of the modal, close it
+
     window.onclick = function (event) {
         if (event.target === modal || event.target === modalTwo) {
             modal.style.display = "none";

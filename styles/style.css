@@ -416,7 +416,7 @@ li a {
     }
 }
 
-@media only screen and (max-width: 320px) {
+@media only screen and (max-width: 319px) {
     .marquee span {
         animation: none;
         padding-left: 0
