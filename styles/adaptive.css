@@ -12,6 +12,10 @@
         font-size: 20px;
     }
 
+    .banner-about {
+        font-size: 35px;
+    }
+
 }
 
 @media screen and (max-width: 1100px) {
@@ -59,7 +63,7 @@
         display: none;
     }
 
-    .card img {
+    .bg-card {
         height: 280px;
     }
 
@@ -79,10 +83,6 @@
     .header-info-item svg {
         width: 30px;
         height: 30px;
-    }
-
-    .banner-about {
-        font-size: 50px;
     }
 
     .about-image {
@@ -125,9 +125,7 @@
     }
 
     .banner-about {
-        margin: 0 100px; /* Центр текстового контейнера */
         padding: 10px;
-        width: 50%;
     }
 
     .marquee span {
@@ -138,7 +136,7 @@
         font-size: 15px;
     }
 
-    .card img {
+    .bg-card {
         height: 230px;
     }
 
@@ -163,7 +161,9 @@
     }
 
     .banner-about {
-        font-size: 40px;
+        font-size: 30px;
+        top: 50%;
+        width: 30%;
     }
 
     .marquee span {
@@ -330,7 +330,9 @@
     }
 
     .banner-about {
-        font-size: 35px;
+        top: 30%;
+        left: 60%;
+        width: 45%;
     }
 
     .about-part {
@@ -435,7 +437,7 @@
         height: 202px;
     }
 
-    .card img {
+    .bg-card {
         height: 180px;
     }
 
@@ -451,16 +453,26 @@
         font-size: 15px;
     }
 
+    .upbtn {
+        width: 35px;
+        height: 35px;
+    }
+
 }
 
 @media all and (max-width: 500px) {
+
+    .banner {
+        height: 60vh;
+    }
 
     .header-info {
         display: none;
     }
 
     .banner-about {
-        font-size: 30px;
+       border-width: 5px;
+        font-size: 25px;
     }
 
     .marquee span {
@@ -468,7 +480,7 @@
     }
 
     .header-contact-item {
-        width: 35px;
+        width: 40px;
     }
 
     .header-contact-item img {
@@ -556,7 +568,7 @@
         margin-bottom: 30px;
     }
 
-    .card img {
+    .bg-card {
         height: 250px;
     }
 
@@ -568,10 +580,6 @@
         order: 1;
     }
 
-    #myBtn {
-        padding: 10px; /* Немного отступов */
-        font-size: 15px; /* Увеличить размер шрифта */
-    }
 }
 
 @media all and (max-width: 425px) {
@@ -585,7 +593,7 @@
     }
 
     .banner-about {
-        font-size: 25px;
+        font-size: 23px;
     }
 
     .form-send {
@@ -605,7 +613,7 @@
         padding-right: 5px;
     }
 
-    .card img {
+    .bg-card {
         height: 200px;
     }
 

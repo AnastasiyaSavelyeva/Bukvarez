@@ -127,28 +127,25 @@ $(document).ready(function () {
 })
 
 //scroll-button
-// Получить кнопку:
-const myButton = document.getElementById("myBtn");
 
-// Когда пользователь прокручивает вниз 20px от верхней части документа, покажите кнопку
-window.onscroll = function () {
-    scrollFunction()
-};
-
-function scrollFunction() {
-    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-        myButton.style.display = "block";
+$('body').append('<div class="upbtn"></div>');
+$(window).scroll(function() {
+    if ($(this).scrollTop() > 1500) {
+        $('.upbtn').css({
+            bottom: '15px'
+        });
     } else {
-        myButton.style.display = "none";
+        $('.upbtn').css({
+            bottom: '-80px'
+        });
     }
-}
-
-// Когда пользователь нажимает на кнопку, прокрутите до верхней части документа
-function topFunction() {
-
-    document.body.scrollTop = 0; // Для Safari
-    document.documentElement.scrollTop = 0; // Для Chrome, Firefox, IE и Opera
-}
+});
+$('.upbtn').on('click',function() {
+    $('html, body').animate({
+        scrollTop: 0
+    }, 500);
+    return false;
+});
 
 
 

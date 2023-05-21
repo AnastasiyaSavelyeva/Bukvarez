@@ -231,7 +231,8 @@ body {
     display: none;
     position: absolute;
     background-color: #38074d;
-    min-width: 200px;
+    min-width: 250px;
+    left: -50px;
 
 }
 
@@ -255,11 +256,21 @@ body {
 
 /*----header-menu-------*/
 
+.header-bottom {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background-color: rgba(56, 7, 77, .9);
+    background-position: top;
+    background-size: cover;
+    padding: 20px 0;
+}
+
 .header-menu {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
     list-style: none;
-    margin-top: 30px;
 }
 
 .header-menu-link:not(.header-drop-menu)::after {
@@ -332,7 +343,8 @@ li a {
 }
 
 
-/*------carousel-----*/
+/*
+!*------carousel-----*!
 .cd-resize-img {
     position: absolute;
     top: 0;
@@ -340,14 +352,14 @@ li a {
     height: 100%;
     width: 0;
     overflow: hidden;
-    /* Force Hardware Acceleration in WebKit */
+    !* Force Hardware Acceleration in WebKit *!
     transform: translateZ(0);
     backface-visibility: hidden;
 }
 
 .is-visible .cd-resize-img {
     width: 50%;
-    /* bounce in animation of the modified image */
+    !* bounce in animation of the modified image *!
     animation: cd-bounce-in 0.7s;
 }
 
@@ -362,6 +374,7 @@ li a {
         width: 50%;
     }
 }
+*/
 
 
 /*.main-slider {
@@ -424,26 +437,30 @@ li a {
 }
 
 .banner {
-    background-image: url("../images/main.webp"); /* Используемый образ - важно! */
+    background-image: url("../images/main3.webp"); /* Используемый образ - важно! */
     background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     position: relative; /* Необходимо расположить вырезанный текст в середине изображения */
     height: 80vh; /* Некоторая высота */
 }
 
 .banner-about {
-    background-color: white;
-    color: black;
-    font-size: 60px; /* Адаптивный размер шрифта */
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0, 0.4);
+    color: white;
+    border: 10px solid #f1f1f1;
+    font-size: 50px; /* Адаптивный размер шрифта */
     font-weight: bold;
-    margin: 0 200px; /* Центр текстового контейнера */
+    margin: 0 auto; /* Центр текстового контейнера */
     padding: 10px;
-    width: 40%;
+    width: 30%;
     text-align: center; /* Текст по центру */
     position: absolute; /* Текст положения */
-    top: 50%; /* Расположите текст посередине */
-    left: 50%; /* Расположите текст посередине */
-    transform: translate(-50%, -50%); /* Расположите текст посередине */
-    mix-blend-mode: screen; /* Это делает возможным вырезание текста */
+    top: 35%; /* Расположите текст посередине */
+    left: 70%; /* Расположите текст посередине */
+    transform: translate(-50%, -50%); /* Расположите текст посередине *//*
+    mix-blend-mode: screen; !* Это делает возможным вырезание текста *!*/
     border-radius: 10px;
 }
 
@@ -765,12 +782,40 @@ li a {
 
 .card2 {
     position: relative;
-    box-shadow: 0 0 15px white;
+    box-shadow: 0 0 10px black;
     transition: 0.3s;
     border-radius: 10px;
     width: 300px;
     height: 300px;
     flex-shrink: 0;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.card2-1, .card-1 {
+    background-image: url("../images/photos/2.webp");
+}
+.card2-2, .card-2 {
+    background-image: url("../images/photos/22.webp");
+}
+.card2-3, .card-3 {
+    background-image: url("../images/photos/27.webp");
+}
+.card2-4, .card-4 {
+    background-image: url("../images/photos/36.webp");
+}
+.card2-5, .card-5 {
+    background-image: url("../images/photos/39.webp");
+}
+.card2-6, .card-6 {
+    background-image: url("../images/photos/42.webp");
+}
+.card2-7, .card-7 {
+    background-image: url("../images/photos/46.webp");
+}
+.card2-8, .card-8 {
+    background-image: url("../images/photos/51.webp");
 }
 
 .click {
@@ -1084,17 +1129,19 @@ input[type="checkbox"] {
 .card {
     box-shadow: 0 0 15px white;
     transition: 0.3s;
-    border-radius: 10px;
     width: 40%;
     flex-shrink: 0;
+    border-radius: 10px;
 }
 
-.card img {
+.bg-card {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     border-radius: 5px 5px 0 0;
-    width: 100%;
     height: 350px;
-    cursor: pointer;
 }
+
 
 .card-text {
     text-align: center;
@@ -1105,7 +1152,6 @@ input[type="checkbox"] {
 
 .service-example-title {
     margin: 30px 0;
-    /* color: #38074d;*/
     color: #d0be63;
     font-size: 20px;
     border-bottom: 2px solid #d0be63;
@@ -1114,17 +1160,10 @@ input[type="checkbox"] {
     cursor: pointer;
 }
 
-.service-example-title img {
-    position: absolute;
-    right: -40px;
-    width: 20px;
-    bottom: 3px;
-    cursor: pointer;
-    transition: .2s ease all;
-}
+.service-example-title:hover {
+    color: white;
+    border-color: white;
 
-.service-example-title img:hover {
-    transform: scale(1.2);
 }
 
 .service-examples {
@@ -1550,26 +1589,31 @@ input[type="checkbox"] {
 
 /*----scroll-button----*/
 
-#myBtn {
-    display: none; /* Скрыто по умолчанию */
-    position: fixed; /* Фиксированное / липкое положение */
-    bottom: 10px; /* Поместите кнопку в нижней части страницы */
-    right: 10px; /* Разместить кнопку 30 пикселей от правого */
-    z-index: 99; /* Убедитесь, что он не перекрывается */
-    border: none; /* Удалить границы */
-    outline: none; /* Удалить контур */
-    background-color: #d0be63; /* Установка цвета фона */
-    color: white; /* Цвет текста */
-    cursor: pointer; /* Добавить указатель мыши при наведении */
-    padding: 15px; /* Немного отступов */
-    border-radius: 10px; /* Округленные углы */
-    font-size: 18px; /* Увеличить размер шрифта */
+.upbtn {
+    font: normal 75% Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    opacity: 0.5;
+    z-index: 9999;
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    right: 20px;
+    cursor: pointer;
+    border: 3px solid #e5e5e5;
+    transition: all .7s ease-in-out;
+    border-radius: 10px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-color: rgba(56, 7, 77, .7);
+    background-image: url(data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTYuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgd2lkdGg9IjMycHgiIGhlaWdodD0iMzJweCIgdmlld0JveD0iMCAwIDQ0NC44MTkgNDQ0LjgxOSIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgNDQ0LjgxOSA0NDQuODE5OyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+CjxnPgoJPHBhdGggZD0iTTQzMy45NjgsMjc4LjY1N0wyNDguMzg3LDkyLjc5Yy03LjQxOS03LjA0NC0xNi4wOC0xMC41NjYtMjUuOTc3LTEwLjU2NmMtMTAuMDg4LDAtMTguNjUyLDMuNTIxLTI1LjY5NywxMC41NjYgICBMMTAuODQ4LDI3OC42NTdDMy42MTUsMjg1Ljg4NywwLDI5NC41NDksMCwzMDQuNjM3YzAsMTAuMjgsMy42MTksMTguODQzLDEwLjg0OCwyNS42OTNsMjEuNDExLDIxLjQxMyAgIGM2Ljg1NCw3LjIzLDE1LjQyLDEwLjg1MiwyNS42OTcsMTAuODUyYzEwLjI3OCwwLDE4Ljg0Mi0zLjYyMSwyNS42OTctMTAuODUyTDIyMi40MSwyMTMuMjcxTDM2MS4xNjgsMzUxLjc0ICAgYzYuODQ4LDcuMjI4LDE1LjQxMywxMC44NTIsMjUuNywxMC44NTJjMTAuMDgyLDAsMTguNzQ3LTMuNjI0LDI1Ljk3NS0xMC44NTJsMjEuNDA5LTIxLjQxMiAgIGM3LjA0My03LjA0MywxMC41NjctMTUuNjA4LDEwLjU2Ny0yNS42OTNDNDQ0LjgxOSwyOTQuNTQ1LDQ0MS4yMDUsMjg1Ljg4NCw0MzMuOTY4LDI3OC42NTd6IiBmaWxsPSIjRkZGRkZGIi8+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPC9zdmc+Cg==);
+    bottom: 15px;
 }
 
-#myBtn:hover {
-    background-color: #555; /* Добавить темно-серый фон при наведении курсора */
+.upbtn:hover {
+    opacity: 1;
+    background-color: #38074d;
 }
-
 
 /*-----footer--------*/
 
@@ -1642,3 +1686,4 @@ input[type="checkbox"] {
     justify-content: space-between;
     align-items: center;
 }
+
