@@ -29,17 +29,6 @@ function closeNav() {
 }
 
 
-//progress-bar
-/*
-window.onscroll = function() {myFunction()};
-
-function myFunction() {
-    const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-    const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-    const scrolled = (winScroll / height) * 100;
-    document.getElementById("myBar").style.width = scrolled + "%";
-}*/
-
 //drop-menu
 $(window).ready(function () {
     const dropMenu = document.getElementById('drop-menu');
@@ -56,23 +45,6 @@ $(window).ready(function () {
         }
     })
 
-    /*//input-mask
-    const phone = document.getElementById('phone')
-    phone.inputmask({"mask": "+7 (999) 999-99-99"});*/
-
-//popup
-
-    const popupButton = document.getElementById('popup-button');
-    const closeButton = document.getElementById('close')
-    const popup = document.getElementById('popup');
-
-    popupButton.addEventListener('click', () => {
-        popup.style.display = 'flex';
-    })
-
-    closeButton.addEventListener('click', () => {
-        popup.style.display = 'none';
-    })
 
 //scrolling
 
@@ -106,20 +78,16 @@ $(window).ready(function () {
     }
 
 
-//main
+//questions
 
     $(document).ready(function ($) {
-        // проверка является ли .cd-image-container в области видимости
-        // ...
 
-        // делаем элемент .cd-handle движимым и сменяем позицию .cd-resize-img
         $('.cd-image-container').each(function () {
             const actual = $(this);
             drags(actual.find('.cd-handle'), actual.find('.cd-resize-img'), actual);
         });
     });
 
-// реализация перетаскивание http://css-tricks.com/snippets/jquery/draggable-without-jquery-ui/
     function drags(dragElement, resizeElement, container) {
         dragElement.on("mousedown vmousedown", function (e) {
             dragElement.addClass('draggable');
@@ -150,7 +118,6 @@ $(window).ready(function () {
 
                 $('.resizable').css('width', widthValue);
 
-                // ...
 
             }).on("mouseup vmouseup", function () {
                 dragElement.removeClass('draggable');
@@ -185,6 +152,14 @@ $('.upbtn').on('click',function() {
     }, 500);
     return false;
 });
+
+//form
+
+let phone1 = $('#phone1'),
+    phone2 = $('#phone2');
+
+   phone1.inputmask({"mask": "+7 (999) 999-99-99"});
+   phone2.inputmask({"mask": "+7 (999) 999-99-99"});
 
 
 

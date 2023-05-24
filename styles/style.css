@@ -33,31 +33,6 @@ body {
     background-attachment: fixed;
 }
 
-/*-------progress-bar---------*/
-
-/*!* Стиль заголовка: фиксированная позиция (всегда оставайтесь наверху) *!
-.progress {
-  position: fixed;
-  top: 0;
-  z-index: 1;
-  width: 100%;
-  background-color: #f1f1f1;
-}
-
-!* Контейнер прогресса (серый фон) *!
-.progress-container {
-  width: 100%;
-  height: 8px;
-  background: #ccc;
-}
-
-!* Индикатор прогресса (индикатор прокрутки) *!
-.progress-bar {
-  height: 8px;
-  background: #d0be63;
-  width: 0;
-}*/
-
 .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -148,7 +123,7 @@ body {
     position: fixed;
     z-index: 100;
     right: 0;
-    top: 30%;
+    top: 50%;
 }
 
 .header-contact-link img {
@@ -262,8 +237,6 @@ body {
     top: 0;
     z-index: 10;
     background-color: rgba(56, 7, 77, .9);
-    background-position: top;
-    background-size: cover;
     padding: 20px 0;
 }
 
@@ -342,61 +315,6 @@ li a {
     margin-bottom: 10px;
 }
 
-
-/*
-!*------carousel-----*!
-.cd-resize-img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 0;
-    overflow: hidden;
-    !* Force Hardware Acceleration in WebKit *!
-    transform: translateZ(0);
-    backface-visibility: hidden;
-}
-
-.is-visible .cd-resize-img {
-    width: 50%;
-    !* bounce in animation of the modified image *!
-    animation: cd-bounce-in 0.7s;
-}
-
-@keyframes cd-bounce-in {
-    0% {
-        width: 0;
-    }
-    60% {
-        width: 55%;
-    }
-    100% {
-        width: 50%;
-    }
-}
-*/
-
-
-/*.main-slider {
-  background-color: white;
-  padding: 30px 0;
-}
-
-.main-carousel {
-  margin-top: 30px;
-}
-
-.main-carousel-image {
-  max-width: 1200px;
-  height: 70vh;
-}
-
-.main-carousel-image img {
-  border-radius: 10px;
-  width: 100%;
-  object-fit: cover;
-}*/
-
 /*----banner-------*/
 
 .marquee {
@@ -404,6 +322,7 @@ li a {
     width: 100%;
     overflow: hidden;
     white-space: nowrap;
+    padding: 20px 0;
 }
 
 .marquee span {
@@ -437,30 +356,29 @@ li a {
 }
 
 .banner {
-    background-image: url("../images/main3.webp"); /* Используемый образ - важно! */
+    background-image: url("../images/main3.webp");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    position: relative; /* Необходимо расположить вырезанный текст в середине изображения */
-    height: 80vh; /* Некоторая высота */
+    position: relative;
+    height: 80vh;
 }
 
 .banner-about {
-    background-color: rgb(0,0,0);
-    background-color: rgba(0,0,0, 0.4);
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
     color: white;
     border: 10px solid #f1f1f1;
-    font-size: 50px; /* Адаптивный размер шрифта */
+    font-size: 50px;
     font-weight: bold;
-    margin: 0 auto; /* Центр текстового контейнера */
+    margin: 0 auto;
     padding: 10px;
     width: 30%;
-    text-align: center; /* Текст по центру */
-    position: absolute; /* Текст положения */
-    top: 35%; /* Расположите текст посередине */
-    left: 70%; /* Расположите текст посередине */
-    transform: translate(-50%, -50%); /* Расположите текст посередине *//*
-    mix-blend-mode: screen; !* Это делает возможным вырезание текста *!*/
+    text-align: center;
+    position: absolute;
+    top: 35%;
+    left: 70%;
+    transform: translate(-50%, -50%);
     border-radius: 10px;
 }
 
@@ -508,7 +426,6 @@ li a {
 
 .about {
     padding-top: 60px;
-    /* background-image: url("../images/white2.jpg");*/
     background-color: #e5e5e5;
     position: relative;
 }
@@ -574,10 +491,16 @@ li a {
     cursor: pointer;
 }
 
+.consultation {
+    text-align: center;
+    text-decoration: none;
+}
+
 .clients p {
     width: 100%;
     margin-top: 50px;
 }
+
 
 
 /*-------advantages---------*/
@@ -639,11 +562,6 @@ li a {
     width: 70%;
     transition: .2s ease all;
 }
-
-/*
-.advantages-block-image:hover {
-  box-shadow: 0 0 20px 5px white;
-}*/
 
 .advantages-block:hover img {
     transform: scale(1.1);
@@ -796,24 +714,31 @@ li a {
 .card2-1, .card-1 {
     background-image: url("../images/photos/2.webp");
 }
+
 .card2-2, .card-2 {
     background-image: url("../images/photos/22.webp");
 }
+
 .card2-3, .card-3 {
     background-image: url("../images/photos/27.webp");
 }
+
 .card2-4, .card-4 {
     background-image: url("../images/photos/36.webp");
 }
+
 .card2-5, .card-5 {
     background-image: url("../images/photos/39.webp");
 }
+
 .card2-6, .card-6 {
     background-image: url("../images/photos/42.webp");
 }
+
 .card2-7, .card-7 {
     background-image: url("../images/photos/46.webp");
 }
+
 .card2-8, .card-8 {
     background-image: url("../images/photos/51.webp");
 }
@@ -900,7 +825,7 @@ li a {
 }
 
 .collapsible:after {
-    content: '\02795'; /* Символ юникода для знака "плюс" (+) */
+    content: '\02795';
     font-size: 13px;
     color: white;
     float: right;
@@ -908,7 +833,7 @@ li a {
 }
 
 .active:after {
-    content: '\2796'; /* Символ юникода для знака "минус" (-) */
+    content: '\2796';
 }
 
 /*-----scroll------*/
@@ -983,16 +908,35 @@ input[type="checkbox"] {
 
 .checkbox {
     font-size: 15px;
+    display: flex;
+    align-items: start;
 }
 
 .checkbox a {
     color: #8432a8;
 }
 
-
 .form-send input:focus,
 .form-send textarea:focus {
     outline: none;
+}
+
+.error, .error-check {
+    display: none;
+    color: #ad0707;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.error-check {
+    margin-top: 10px;
+}
+
+.agreement {
+    margin-left: 27px;
+    font-size: 14px;
+    color: #38074d;
+    line-height: 1.286;
 }
 
 .btn-submit {
@@ -1007,30 +951,6 @@ input[type="checkbox"] {
     color: white;
 }
 
-.popup-fade {
-    display: none;
-}
-
-.popup-fade::before {
-    content: '';
-    background: #38074d;
-    position: fixed;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    opacity: 0.8;
-    z-index: 300;
-}
-
-
-.popup.form-send {
-    position: fixed;
-    z-index: 300;
-    background-color: rgba(255, 255, 255, .9);
-    left: calc(50% - 250px);
-    top: 20%;
-}
 
 .close {
     position: absolute;
@@ -1119,7 +1039,6 @@ input[type="checkbox"] {
 
 .service-about {
     max-width: 50%;
-    /* color: #38074d;*/
     color: white;
     line-height: 1.5;
     letter-spacing: 2px;
@@ -1431,9 +1350,6 @@ input[type="checkbox"] {
   padding: 15px 0;
 }*/
 
-.slide-holder:focus {
-    outline: none;
-}
 
 /*
 .slide-content {
@@ -1464,6 +1380,10 @@ input[type="checkbox"] {
   text-align: right;
 }*/
 
+/*.slide-holder:focus {
+    outline: none;
+}
+
 .arrow-prev {
     position: absolute;
     left: 20px;
@@ -1484,7 +1404,7 @@ input[type="checkbox"] {
     width: 50px;
     height: 50px;
     cursor: pointer;
-}
+}*/
 
 /*----------more---------*/
 
@@ -1686,4 +1606,70 @@ input[type="checkbox"] {
     justify-content: space-between;
     align-items: center;
 }
+
+/*------loader----*/
+
+
+.loader-center {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(37, 37, 45, 0.6);
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.lds-ripple {
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 80px;
+}
+
+.lds-ripple div {
+    position: absolute;
+    border: 4px solid #d0be63;
+    opacity: 1;
+    border-radius: 50%;
+    animation: lds-ripple 1s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+}
+
+.lds-ripple div:nth-child(2) {
+    animation-delay: -0.5s;
+}
+
+@keyframes lds-ripple {
+    0% {
+        top: 36px;
+        left: 36px;
+        width: 0;
+        height: 0;
+        opacity: 0;
+    }
+    4.9% {
+        top: 36px;
+        left: 36px;
+        width: 0;
+        height: 0;
+        opacity: 0;
+    }
+    5% {
+        top: 36px;
+        left: 36px;
+        width: 0;
+        height: 0;
+        opacity: 1;
+    }
+    100% {
+        top: 0;
+        left: 0;
+        width: 72px;
+        height: 72px;
+        opacity: 0;
+    }
+}
+
 
