@@ -359,10 +359,9 @@ li a {
     }
 }
 
-
 .slide-inner {
     border-radius: 10px;
-    background-image: url("../images/slider-fon.webp");
+    background-image: url("https://adonius.club/uploads/posts/2022-02/thumbs/1644912287_48-adonius-club-p-cherno-fioletovii-gradient-fon-53.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -458,7 +457,7 @@ li a {
 }
 
 .content-left-down {
-    background-color: rgba(121, 18, 136, .4);
+    background-color: rgba(121, 18, 136, .5);
     color: white;
     line-height: 1.5;
     font-size: 27px;
