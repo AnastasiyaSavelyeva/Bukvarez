@@ -123,7 +123,7 @@ body {
     position: fixed;
     z-index: 100;
     right: 0;
-    top: 50%;
+    top: 65%;
 }
 
 .header-contact-link img {
@@ -317,6 +317,10 @@ li a {
 
 /*----banner-------*/
 
+.slider {
+    margin-bottom: 30px;
+}
+
 .marquee {
     text-align: left;
     width: 100%;
@@ -355,31 +359,168 @@ li a {
     }
 }
 
-.banner {
-    background-image: url("../images/main3.webp");
+
+.slide-inner {
+    border-radius: 10px;
+    background-image: url("../images/slider-fon.webp");
     background-size: cover;
-    background-position: center;
     background-repeat: no-repeat;
+    background-position: center;
+    display: grid;
+    grid-gap: 20px;
+    align-items: center;
+    padding: 30px 60px;
+    height: 70vh;
     position: relative;
-    height: 80vh;
 }
 
-.banner-about {
-    background-color: rgb(0, 0, 0);
-    background-color: rgba(0, 0, 0, 0.4);
-    color: white;
-    border: 10px solid #f1f1f1;
-    font-size: 50px;
-    font-weight: bold;
-    margin: 0 auto;
-    padding: 10px;
-    width: 30%;
-    text-align: center;
-    position: absolute;
-    top: 35%;
-    left: 70%;
-    transform: translate(-50%, -50%);
+.slide-inner.inner-first {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.slide-inner.inner-second {
+    grid-template-columns: repeat(3, 1fr);
+    position: relative;
+}
+
+.slide-inner.inner-third {
+    grid-template-columns: repeat(2, 1fr);
+    position: relative;
+}
+
+.slide-image {
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 0 40px 5px black;
     border-radius: 10px;
+    position: relative;
+    z-index: 3;
+}
+
+.inner-first .slide-image-one {
+    width: 600px;
+    height: 400px;
+    background-image: url("../images/photos/2.webp");
+}
+
+.inner-second .slide-image-two {
+    width: 300px;
+    height: 220px;
+    align-self: end;
+    background-image: url("../images/photos/7.webp");
+}
+
+.inner-second .slide-image-three {
+    width: 320px;
+    height: 380px;
+    align-self: end;
+    background-image: url("../images/photos/22.webp");
+}
+
+.inner-second .slide-image-four {
+    width: 380px;
+    height: 300px;
+    align-self: start;
+    background-image: url("../images/photos/6.webp");
+}
+
+.inner-third .slide-image-five {
+    width: 450px;
+    height: 250px;
+    align-self: end;
+    justify-self: center;
+    background-image: url("../images/photos/9.webp");
+}
+
+.inner-third .slide-image-six {
+    width: 100px;
+    height: 100%;
+    border-radius: 0;
+    position: absolute;
+    right: 0;
+    justify-self: right;
+    background-image: url("../images/photos/8.webp");
+}
+
+.slide-content {
+    width: 400px;
+    text-align: center;
+    padding: 20px 10px;
+    margin: 0 auto;
+    text-shadow: 0 0 10px black;
+    border-radius: 10px;
+}
+
+.content-left-top {
+    width: 100%;
+    color: #d0be63;
+    font-size: 27px;
+}
+
+.content-left-down {
+    background-color: rgba(121, 18, 136, .4);
+    color: white;
+    line-height: 1.5;
+    font-size: 27px;
+}
+
+.content-left-down.yellow {
+    color: #d0be63;
+    position: absolute;
+    z-index: 2;
+    font-size: 22px;
+    top: 30px;
+    left: 30px;
+}
+
+.content-left-down.yellow.center {
+    width: 700px;
+    left: 20%;
+    font-size: 27px;
+}
+
+.content-left-down.white {
+    position: absolute;
+    z-index: 2;
+    bottom: 100px;
+    width: 30%;
+    right: 50px;
+    background: none;
+}
+
+.content-left-down.white.bg {
+    right: 200px;
+    bottom: 50px;
+}
+
+.content-left-down span {
+    color: #d0be63;
+}
+
+.slide-holder:focus {
+    outline: none;
+}
+
+.arrow-prev {
+    position: absolute;
+    left: 20px;
+    top: calc(50% - 25px);
+    fill: #d0be63;
+    z-index: 3;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+}
+
+.arrow-next {
+    position: absolute;
+    right: 20px;
+    top: calc(50% - 25px);
+    fill: #d0be63;
+    z-index: 10;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
 }
 
 .btn-slide {
@@ -779,7 +920,6 @@ li a {
     margin-bottom: 20px;
 }
 
-/* Стиль кнопка, которая используется для открытия и закрытия складного содержимого */
 .collapsible {
     background-color: transparent;
     border: 1px solid white;
@@ -904,6 +1044,7 @@ li a {
 input[type="checkbox"] {
     width: 20px;
     margin: 10px 10px 0 0;
+    transform: scale(1.5)
 }
 
 .checkbox {
@@ -1328,30 +1469,28 @@ input[type="checkbox"] {
   margin: 50px 0;
 }
 
-
-.slide-inner {
+*/
+/*.slide-inner {
 
   position: relative;
   border-radius: 10px;
 }
 
 .slide-holder .slide-inner {
-  background: url("../images/photos/review-1.jpg") top/contain no-repeat;
+  background: url("../images/1.png") top/contain no-repeat;
   width: 500px;
   height: 200px;
 }
 .slide-holder:nth-child(2) .slide-inner {
-  background: url("../images/photos/review-2.jpg") center/contain no-repeat;
+  background: url("../images/2.png") center/contain no-repeat;
   width: 500px;
   height: 200px;
-}*/
+}
 
-/*.slide-holder {
+.slide-holder {
   padding: 15px 0;
-}*/
+}
 
-
-/*
 .slide-content {
   max-width: 550px;
   width: 100%;
@@ -1378,9 +1517,9 @@ input[type="checkbox"] {
   right: 0;
   bottom: 0;
   text-align: right;
-}*/
+}
 
-/*.slide-holder:focus {
+.slide-holder:focus {
     outline: none;
 }
 
@@ -1476,7 +1615,6 @@ input[type="checkbox"] {
     }
 }
 
-/* Кнопка закрытия */
 .closeModal {
     color: white;
     float: right;
@@ -1607,69 +1745,5 @@ input[type="checkbox"] {
     align-items: center;
 }
 
-/*------loader----*/
-
-
-.loader-center {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(37, 37, 45, 0.6);
-    display: none;
-    justify-content: center;
-    align-items: center;
-}
-
-.lds-ripple {
-    display: inline-block;
-    position: relative;
-    width: 80px;
-    height: 80px;
-}
-
-.lds-ripple div {
-    position: absolute;
-    border: 4px solid #d0be63;
-    opacity: 1;
-    border-radius: 50%;
-    animation: lds-ripple 1s cubic-bezier(0, 0.2, 0.8, 1) infinite;
-}
-
-.lds-ripple div:nth-child(2) {
-    animation-delay: -0.5s;
-}
-
-@keyframes lds-ripple {
-    0% {
-        top: 36px;
-        left: 36px;
-        width: 0;
-        height: 0;
-        opacity: 0;
-    }
-    4.9% {
-        top: 36px;
-        left: 36px;
-        width: 0;
-        height: 0;
-        opacity: 0;
-    }
-    5% {
-        top: 36px;
-        left: 36px;
-        width: 0;
-        height: 0;
-        opacity: 1;
-    }
-    100% {
-        top: 0;
-        left: 0;
-        width: 72px;
-        height: 72px;
-        opacity: 0;
-    }
-}
 
 

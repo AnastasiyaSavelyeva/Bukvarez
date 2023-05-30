@@ -1,7 +1,7 @@
 'use strict'
 
 
-/*$(document).ready(function(){
+$(document).ready(function(){
     $('.slider-inner').slick({
         arrows: true,
         prevArrow: '.arrow-prev',
@@ -14,7 +14,7 @@
         cssEase: 'linear',
         autoplay: true,
 });
-});*/
+});
 
 new WOW({
     animateClass: 'animate__animated'
