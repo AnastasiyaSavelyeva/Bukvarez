@@ -8,11 +8,11 @@ $(document).ready(function(){
         nextArrow: '.arrow-next',
         dots: false,
         dotsClass: 'slick-dots',
-        infinite: true,
+/*        infinite: true,
         speed: 500,
         fade: true,
         cssEase: 'linear',
-        autoplay: true,
+        autoplay: true,*/
 });
 });
 
