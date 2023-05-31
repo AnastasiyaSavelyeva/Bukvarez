@@ -361,74 +361,104 @@ li a {
 
 .slide-inner {
     border-radius: 10px;
-    background-image: url("https://adonius.club/uploads/posts/2022-02/thumbs/1644912287_48-adonius-club-p-cherno-fioletovii-gradient-fon-53.jpg");
+    background-image: url("https://uprostim.com/wp-content/uploads/2021/04/image005-35-scaled.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     display: grid;
     grid-gap: 20px;
     align-items: center;
+    justify-items: center;
     padding: 30px 60px;
-    height: 70vh;
+    height: auto;
     position: relative;
 }
 
 .slide-inner.inner-first {
     grid-template-columns: repeat(2, 1fr);
+    padding: 70px 60px;
 }
 
 .slide-inner.inner-second {
     grid-template-columns: repeat(3, 1fr);
-    position: relative;
 }
 
 .slide-inner.inner-third {
     grid-template-columns: repeat(2, 1fr);
-    position: relative;
+    padding: 70px 60px;
 }
 
-.slide-image {
-    background-size: cover;
-    background-position: center;
-    box-shadow: 0 0 40px 5px black;
-    border-radius: 10px;
+/*.slide-image {
     position: relative;
     z-index: 3;
+}*/
+
+.slide-image img {
+    box-shadow: 0 0 20px black;
+    border-radius: 10px;
+
 }
 
 .inner-first .slide-image-one {
-    width: 600px;
-    height: 400px;
-    background-image: url("../images/photos/2.webp");
+    max-width: 600px;
+    max-height: 400px;
+    grid-column: 2/3;
+    grid-row: 1/3;
+   /* background-image: url("../images/photos/2.webp");*/
 }
 
-.inner-second .slide-image-two {
-    width: 300px;
-    height: 220px;
-    align-self: end;
-    background-image: url("../images/photos/7.webp");
+.inner-first .slide-image-one img {
+    width: 100%;
+}
+
+.inner-second .slide-image-two  {
+    max-width: 300px;
+    max-height: 220px;
+    grid-column: 1/2;
+    grid-row: 2/3;
+    /*background-image: url("../images/photos/7.webp");*/
+}
+
+.inner-second .slide-image-two img {
+    width: 100%;
 }
 
 .inner-second .slide-image-three {
-    width: 320px;
-    height: 380px;
-    align-self: end;
-    background-image: url("../images/photos/22.webp");
+    max-width: 320px;
+    max-height: 380px;
+    grid-column: 2/3;
+    grid-row: 2/3;
+    margin-top: -160px;
+    /*background-image: url("../images/photos/22.webp");*/
+}
+
+.inner-second .slide-image-three img {
+    width: 100%;
 }
 
 .inner-second .slide-image-four {
-    width: 380px;
-    height: 300px;
-    align-self: start;
-    background-image: url("../images/photos/6.webp");
+    max-width: 380px;
+    max-height: 300px;
+    grid-column: 3/4;
+    grid-row: 1/2;
+   /* background-image: url("../images/photos/6.webp");*/
+}
+
+.inner-second .slide-image-four img {
+    width: 100%;
 }
 
 .inner-third .slide-image-five {
-    width: 450px;
-    height: 250px;
-    align-self: end;
+    max-width: 450px;
+    max-height: 250px;
     justify-self: center;
-    background-image: url("../images/photos/9.webp");
+    grid-column: 1/2;
+    grid-row: 2/3;
+    /*background-image: url("../images/photos/9.webp");*/
+}
+
+.inner-third .slide-image-five img {
+    width: 100%;
 }
 
 .inner-third .slide-image-six {
@@ -439,10 +469,11 @@ li a {
     right: 0;
     justify-self: right;
     background-image: url("../images/photos/8.webp");
+    background-size: cover;
+    background-position: center;
 }
 
 .slide-content {
-    width: 400px;
     text-align: center;
     padding: 20px 10px;
     margin: 0 auto;
@@ -454,42 +485,45 @@ li a {
     width: 100%;
     color: #d0be63;
     font-size: 27px;
+    grid-column: 1/2;
+    grid-row: 1/2;
 }
 
 .content-left-down {
-    background-color: rgba(121, 18, 136, .5);
+    background-color: rgba(121, 18, 136, .4);
     color: white;
     line-height: 1.5;
     font-size: 27px;
+    grid-column: 1/2;
+    grid-row: 2/3;
 }
 
 .content-left-down.yellow {
     color: #d0be63;
-    position: absolute;
-    z-index: 2;
     font-size: 22px;
-    top: 30px;
-    left: 30px;
+    grid-column: 1/3;
+    grid-row: 1/2;
+    align-self: start;
 }
 
 .content-left-down.yellow.center {
-    width: 700px;
-    left: 20%;
     font-size: 27px;
+    width: 80%;
+    grid-column: 1/3;
+    grid-row: 1/2;
 }
 
 .content-left-down.white {
-    position: absolute;
-    z-index: 2;
-    bottom: 100px;
-    width: 30%;
-    right: 50px;
     background: none;
+    grid-column: 3/4;
+    grid-row: 2/3;
 }
 
 .content-left-down.white.bg {
-    right: 200px;
-    bottom: 50px;
+    grid-column: 2/3;
+    grid-row: 2/3;
+    width: 80%;
+    margin-right: 150px;
 }
 
 .content-left-down span {
