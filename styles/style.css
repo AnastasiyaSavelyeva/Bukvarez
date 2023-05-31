@@ -361,7 +361,7 @@ li a {
 
 .slide-inner {
     border-radius: 10px;
-    background-image: url("https://uprostim.com/wp-content/uploads/2021/04/image005-35-scaled.jpg");
+    background-image: url("../images/slider-fon1.webp");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -388,15 +388,9 @@ li a {
     padding: 70px 60px;
 }
 
-/*.slide-image {
-    position: relative;
-    z-index: 3;
-}*/
-
 .slide-image img {
     box-shadow: 0 0 20px black;
     border-radius: 10px;
-
 }
 
 .inner-first .slide-image-one {
@@ -404,7 +398,6 @@ li a {
     max-height: 400px;
     grid-column: 2/3;
     grid-row: 1/3;
-   /* background-image: url("../images/photos/2.webp");*/
 }
 
 .inner-first .slide-image-one img {
@@ -416,7 +409,6 @@ li a {
     max-height: 220px;
     grid-column: 1/2;
     grid-row: 2/3;
-    /*background-image: url("../images/photos/7.webp");*/
 }
 
 .inner-second .slide-image-two img {
@@ -429,7 +421,6 @@ li a {
     grid-column: 2/3;
     grid-row: 2/3;
     margin-top: -160px;
-    /*background-image: url("../images/photos/22.webp");*/
 }
 
 .inner-second .slide-image-three img {
@@ -441,7 +432,6 @@ li a {
     max-height: 300px;
     grid-column: 3/4;
     grid-row: 1/2;
-   /* background-image: url("../images/photos/6.webp");*/
 }
 
 .inner-second .slide-image-four img {
@@ -454,7 +444,6 @@ li a {
     justify-self: center;
     grid-column: 1/2;
     grid-row: 2/3;
-    /*background-image: url("../images/photos/9.webp");*/
 }
 
 .inner-third .slide-image-five img {
@@ -483,7 +472,7 @@ li a {
 
 .content-left-top {
     width: 100%;
-    color: #d0be63;
+    color: #d3b728;
     font-size: 27px;
     grid-column: 1/2;
     grid-row: 1/2;
@@ -499,7 +488,7 @@ li a {
 }
 
 .content-left-down.yellow {
-    color: #d0be63;
+    color: #d3b728;
     font-size: 22px;
     grid-column: 1/3;
     grid-row: 1/2;
