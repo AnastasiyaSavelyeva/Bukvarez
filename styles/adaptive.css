@@ -852,11 +852,11 @@
     }
 
     .service-examples-item:not(.not) {
-        height: 90px;
+        height: 77px;
     }
 
     .not {
-        height: 195px;
+        height: 170px;
     }
 
     .parallax-window {
